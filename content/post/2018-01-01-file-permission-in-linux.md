@@ -1,8 +1,8 @@
 ---
-title: "Linux Content"
-date: 2019-07-07T16:56:10+07:00
+title: "File permission trong Unix"
+date: 2018-01-01
 draft: false
-tags: ["preview", "English", "tag-2"]
+tags: ["unix"]
 ---
 
 ## Đặt vấn đề

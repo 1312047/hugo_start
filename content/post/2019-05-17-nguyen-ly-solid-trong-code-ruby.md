@@ -1,8 +1,8 @@
 ---
-title: "nguyen ly solid"
-date: 2019-07-07T16:56:10+07:00
+title: "Tổng quan nguyên lý SOLID"
+date: 2019-05-17
 draft: false
-tags: ["preview", "English", "tag-2"]
+tags: ["solid", "ruby"]
 ---
 ## Đặt vấn đề
 
