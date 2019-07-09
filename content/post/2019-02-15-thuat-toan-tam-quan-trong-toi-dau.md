@@ -3,6 +3,7 @@ title: "Giải thuật, bằng cấp và thái độ"
 date: 2019-02-15
 draft: false
 tags: ["random"]
+categories: ["quan điểm của tôi"]
 ---
 ## Đặt vấn đề
 

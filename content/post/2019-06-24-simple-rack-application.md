@@ -1,8 +1,9 @@
 ---
-title: "Simple Rack App"
+title: "A Simple Rack Application"
 date: 2019-06-24
 draft: false
 tags: ["rack", "ruby"]
+categories: ["rails notes"]
 ---
 
 ### 1. Đặt vấn đề

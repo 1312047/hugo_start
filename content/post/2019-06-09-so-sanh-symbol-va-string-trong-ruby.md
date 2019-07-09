@@ -1,8 +1,9 @@
 ---
-title: "Symbol và String"
+title: "Symbol và String trong Ruby"
 date: 2019-06-09
 draft: false
 tags: ["ruby"]
+categories: ["ruby notes"]
 ---
 
 ## Đặt vấn đề

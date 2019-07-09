@@ -1,8 +1,9 @@
 ---
-title: "Các trình thông dịch trong Ruby"
+title: "Vài trình thông dịch cho Ruby"
 date: 2019-02-20
 draft: false
 tags: ["ruby"]
+categories: ["ruby notes"]
 ---
 
 ## Đặt vấn đề

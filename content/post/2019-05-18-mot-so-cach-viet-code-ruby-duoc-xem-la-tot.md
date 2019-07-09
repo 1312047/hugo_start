@@ -1,8 +1,9 @@
 ---
-title: "Quy tắc viết code Ruby (Maybe good)"
+title: "Quy tắc viết code Ruby có thể tốt!"
 date: 2019-05-18
 draft: false
 tags: ["coding", "ruby"]
+categories: ["ruby notes"]
 ---
 
 ## Đặt vấn đề

@@ -3,6 +3,7 @@ title: "Ruby method lookup"
 date: 2019-02-24
 draft: false
 tags: ["ruby"]
+categories: ["ruby notes"]
 ---
 
 ## Đặt vấn đề

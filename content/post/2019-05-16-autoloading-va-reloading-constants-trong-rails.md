@@ -1,8 +1,9 @@
 ---
-title: "Cơ chế Autoloading và Reloading trong Rails"
+title: "Cơ chế Autoloading và Reloading"
 date: 2019-04-17
 draft: false
 tags: ["rails"]
+categories: ["rails notes"]
 ---
 
 ## Đặt vấn đề

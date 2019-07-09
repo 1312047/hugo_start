@@ -1,8 +1,9 @@
 ---
-title: "Các file hệ thống quan trọng trên Unix"
-date: 2019-01-30
+title: "Bash file trên Unix"
+date: 2018-12-30
 draft: false
 tags: ["unix"]
+categories: ["hệ điều hành"]
 ---
 
 ## Đặt vấn đề

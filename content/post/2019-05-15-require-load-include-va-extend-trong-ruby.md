@@ -3,6 +3,7 @@ title: "Require và Load trong Ruby"
 date: 2019-05-15
 draft: false
 tags: ["ruby"]
+categories: ["ruby notes"]
 ---
 ## Đặt vấn đề
 

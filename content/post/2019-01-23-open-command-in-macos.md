@@ -1,8 +1,9 @@
 ---
-title: "Lệnh open trong Unix"
-date: 2019-01-23
+title: "Lệnh open trên Unix, hữu dụng hơn bạn nghĩ"
+date: 2018-01-23
 draft: false
 tags: ["unix"]
+categories: ["hệ điều hành"]
 ---
 
 ## Đặt vấn đề

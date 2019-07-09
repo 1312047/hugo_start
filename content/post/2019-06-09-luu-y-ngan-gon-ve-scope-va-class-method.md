@@ -1,8 +1,9 @@
 ---
-title: "So sánh Class method và Scope"
+title: "So sánh Class Method và Scope"
 date: 2019-06-09
 draft: false
 tags: ["ruby", "rails"]
+categories: ["rails notes"]
 ---
 ## Đặt vấn đề
 

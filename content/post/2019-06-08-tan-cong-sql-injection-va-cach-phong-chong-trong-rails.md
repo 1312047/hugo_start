@@ -3,6 +3,7 @@ title: "Tấn công SQL injection"
 date: 2019-06-08
 draft: false
 tags: ["secure", "rails"]
+categories: ["rails notes"]
 ---
 
 ## Đặt vấn đề

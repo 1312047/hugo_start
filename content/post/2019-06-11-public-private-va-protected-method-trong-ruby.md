@@ -3,6 +3,7 @@ title: "Public, private và protected"
 date: 2019-06-11
 draft: false
 tags: ["ruby"]
+categories: ["ruby notes"]
 ---
 
 ## Đặt vấn đề

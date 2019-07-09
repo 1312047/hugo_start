@@ -1,8 +1,9 @@
 ---
-title: "Simple ORM"
+title: "A Simple ORM"
 date: 2019-06-26
 draft: false
 tags: ["orm", "ruby"]
+categories: ["rails notes"]
 ---
 
 ### 1. Đặt vấn đề

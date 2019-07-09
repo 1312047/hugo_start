@@ -1,8 +1,9 @@
 ---
-title: "Từ khoá super trong Ruby"
+title: "Từ khoá super trong ruby là gì?"
 date: 2019-06-16
 draft: false
 tags: ["ruby"]
+categories: ["ruby notes"]
 ---
 
 ## Đặt vấn đề

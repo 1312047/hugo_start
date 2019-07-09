@@ -1,8 +1,9 @@
 ---
-title: "Các phương thức cập nhật trong ActiveRecord"
+title: "Cập nhật dữ liệu với ActiveRecord"
 date: 2019-05-08
 draft: false
 tags: ["activerecord", "rails"]
+categories: ["rails notes"]
 ---
 
 ## Đặt vấn đề

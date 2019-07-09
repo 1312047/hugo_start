@@ -1,8 +1,9 @@
 ---
-title: "Session và Cookies trong Rails"
+title: "Session vs Cookies trong Rails"
 date: 2019-04-17
 draft: false
 tags: ["rails", "secure"]
+categories: ["rails notes"]
 ---
 
 ## Đặt vấn đề

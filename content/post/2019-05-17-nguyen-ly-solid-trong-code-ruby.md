@@ -3,6 +3,7 @@ title: "Tổng quan nguyên lý SOLID"
 date: 2019-05-17
 draft: false
 tags: ["solid", "ruby"]
+categories: ["ruby notes", "programming"]
 ---
 ## Đặt vấn đề
 

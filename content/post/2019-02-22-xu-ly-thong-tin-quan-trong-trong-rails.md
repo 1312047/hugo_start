@@ -1,8 +1,9 @@
 ---
-title: "Xử lý thông tin bảo mật trong Rails"
+title: "Lưu trữ thông tin bảo mật?"
 date: 2019-02-22
 draft: false
 tags: ["secure", "rails"]
+categories: ["rails notes"]
 ---
 
 ## Đặt vấn đề

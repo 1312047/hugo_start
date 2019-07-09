@@ -1,8 +1,9 @@
 ---
-title: "Tham trị và tham chiếu và mối quan hệ trong Ruby"
+title: "Pass Reference vs Pass Value, Ruby!"
 date: 2019-02-19
 draft: false
 tags: ["programming", "ruby"]
+categories: ["ruby notes", "programming"]
 ---
 
 ## Đặt vấn đề

@@ -1,8 +1,9 @@
 ---
-title: "File permission trong Unix"
+title: "File permission trong Unix là gì?"
 date: 2018-01-01
 draft: false
 tags: ["unix"]
+categories: ["hệ điều hành"]
 ---
 
 ## Đặt vấn đề

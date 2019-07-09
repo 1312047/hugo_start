@@ -1,8 +1,9 @@
 ---
-title: "Tìm hiểu về length, count và size trong Ruby, Rails"
-date: 2019-01-28
+title: "Length, Count và Size"
+date: 2018-06-12
 draft: false
 tags: ["ruby", "rails"]
+categories: ["ruby notes"]
 ---
 
 ## Đặt vấn đề

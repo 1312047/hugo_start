@@ -1,8 +1,9 @@
 ---
-title: "Cục nợ N + 1 và cách xử lý"
+title: "Cục nợ N + 1 và hướng xử lý"
 date: 2019-02-25
 draft: false
 tags: ["database", "rails"]
+categories: ["rails notes"]
 ---
 
 ## Đặt vấn đề

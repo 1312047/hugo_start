@@ -1,8 +1,9 @@
 ---
-title: "Immutable và mutable"
+title: "Immutable vs Mutable"
 date: 2019-04-08
 draft: false
 tags: ["ruby", "programming"]
+categories: ["ruby notes", "programming"]
 ---
 
 ## Đặt vấn đề

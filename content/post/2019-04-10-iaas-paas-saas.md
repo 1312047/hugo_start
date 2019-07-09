@@ -3,6 +3,7 @@ title: "SaaS, PaaS và IaaS"
 date: 2019-04-10
 draft: false
 tags: ["til"]
+categories: ["rails notes"]
 ---
 
 **SaaS:  Software as a Service**  

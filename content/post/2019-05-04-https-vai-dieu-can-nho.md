@@ -1,8 +1,9 @@
 ---
-title: "Https vài điều lưu ý"
+title: "Tìm hiểu về chữ S trong https"
 date: 2019-05-04
 draft: false
 tags: ["https", "secure"]
+categories: ["rails notes"]
 ---
 
 ## Đặt vấn đề
