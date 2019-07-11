@@ -4,6 +4,7 @@ date: 2019-06-24
 draft: false
 tags: ["rack", "ruby"]
 categories: ["rails notes"]
+mytag: "Ruby/Rack"
 ---
 
 ### 1. Đặt vấn đề
@@ -40,7 +41,7 @@ Note: Vậy Rack như một phiên dịch viên để truyền đạt giữa ứ
 
 ### 4. Build một simple Rack application
 
-1) Tạo 1 Folder với 1 file tên `Gemfile` có nội dung như sau:  
+:one: Tạo 1 Folder với 1 file tên `Gemfile` có nội dung như sau:  
 
 ```ruby
 source 'https://rubygems.org'
@@ -48,13 +49,13 @@ source 'https://rubygems.org'
 gem 'rack'
 ```
 
-2) Cài đặt gem vói lệnh `bundle install`
+:two: Cài đặt gem vói lệnh `bundle install`
 
-3) Tạo file `config.ru`.  
+:three: Tạo file `config.ru`.  
 
 Note: Đây sẽ là file main để xử lý request.
 
-4) Chạy project với lệnh `bundle exec rackup`
+:four: Chạy project với lệnh `bundle exec rackup`
 
 > Project demo [tại đây!](https://github.com/hdchinh/simple-rack-app)
 
@@ -93,7 +94,7 @@ map '/' do
   run HomePage.new
 end
 ```
---> Nếu truy cập theo trang chủ thì sẽ chạy lệnh `run HomePage.new`.
+:arrow_right: Nếu truy cập theo trang chủ thì sẽ chạy lệnh `run HomePage.new`.
 
 Nếu url người dùng request không trùng bất cứ trường hợp nào thì chạy lệnh `run MyNotFound.new` ở cuối.  
 
@@ -137,11 +138,11 @@ end
 
 Bạn thấy phức tạp? Không sao cả, chỉ cần chú ý đến dòng cuối cùng trong method call. Ta chỉ cần nhớ:  
 
-1) Mỗi class sử dụng method call để cài đặt (yêu cầu của Rack).  
+:one: Mỗi class sử dụng method call để cài đặt (yêu cầu của Rack).  
 
-2) Trong method này nhận vào một params, đây chính là request đi tới.  
+:two: Trong method này nhận vào một params, đây chính là request đi tới.  
 
-3) Kết quả trả về của method call này là một mảng gồm 3 phần tử:  
+:three: Kết quả trả về của method call này là một mảng gồm 3 phần tử:  
 
 - Status code (Ví dụ như: 200 -> success, 404 -> not found).  
 - Một hash, ở đây chính là header, chứa những thông tin mà trình duyệt cần.  

@@ -4,6 +4,7 @@ date: 2018-01-01
 draft: false
 tags: ["unix"]
 categories: ["hệ điều hành"]
+mytag: "OS/Permission"
 ---
 
 ## Đặt vấn đề
@@ -28,15 +29,15 @@ Hiểu đơn giản như thế này, nhà của bạn, bạn cho tôi vào và c
 
 Trong unix có 3 quyền sử dụng:
 
-* Quyền đọc.
-* Quyền ghi.
-* Quyền thực thi.
+1. Quyền đọc.
+2. Quyền ghi.
+3. Quyền thực thi.
 
 ### 3.Các loại người dùng.
 
-* Owner (người sở hữu file đó - người tạo ra file đó).
-* Group (nhóm sở hữu file).
-* Other (phần còn lại của hệ thống có thể là guest).
+1. Owner (người sở hữu file đó - người tạo ra file đó).
+2. Group (nhóm sở hữu file).
+3. Other (phần còn lại của hệ thống có thể là guest).
 
 | Ngoài ra trên unix thì còn 1 người dùng thứ 4 gọi là root. Đây là người dùng siêu quyền lực và không thể bị ảnh hưởng bởi mấy lệnh phân quyền của bạn
 
@@ -56,15 +57,18 @@ Giải thích câu lệnh trên:
 -xyz là 3 số nguyên liền nhau( giá trị của ba số này có thể là 0,1,2,3,4,5,6,7).
 Với x ứng với quyền phân cho owner, y ứng với quyền phân cho group và z là cho everyone.
 
-0: không có quyền gì cả.
-1: quyền thực thi tập tin.
-2: quyền write only.
-4: quyền read only.
+:zero: không có quyền gì cả.  
+
+:one: quyền thực thi tập tin.  
+
+:two: quyền write only.  
+
+:four: quyền read only.
 
 Với 4 số trên ta có thể cộng lại và ra 1 số mới với permission được cộng dồn.
-Ví dụ: 7 = 4 + 2 + 1 => tất cả các quyền. Tương tự với cả tổ hợp khác.
-Suy ra với lệnh chmod 777 file_name
-=> Ta đã gán tất cả quyền cho cả 3 loại user(như liệt kê ở mục 3).
+Ví dụ: 7 = 4 + 2 + 1 => tất cả các quyền. Tương tự với cả tổ hợp khác.  
+
+Suy ra với lệnh `chmod 777 file_name` --> Ta đã gán tất cả quyền cho cả 3 loại user(như liệt kê ở mục 3).
 
 Hình ảnh minh hoạ:
 
@@ -75,7 +79,7 @@ vào phía trước. Trong các bài tiếp theo sẽ giải thích về ý ngh�
 
 ### 5.Tham khảo
 
-[guru99](https://www.guru99.com/file-permissions.html)
+[1] [guru99](https://www.guru99.com/file-permissions.html)
 
 ## Kết luận
 

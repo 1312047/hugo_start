@@ -4,6 +4,7 @@ date: 2019-06-26
 draft: false
 tags: ["orm", "ruby"]
 categories: ["rails notes"]
+mytag: "Ruby/ORM"
 ---
 
 ### 1. Đặt vấn đề
@@ -30,9 +31,9 @@ Note: Trước hết chúng ta nên đọc trước về định nghĩa của OR
 
 Để xây dựng 1 ORM và chạy một vài ví dụ đơn giản được thì chúng ta có 2 nhiềm vụ phải làm:  
 
-1) Kết nối với cơ sở dữ liệu (ở đây là postgresql).
+:one: Kết nối với cơ sở dữ liệu (ở đây là postgresql).
 
-2) Xây dựng các class bằng Ruby với các phương thức tương ứng để xử lý trên cơ sở dữ liệu đã kết nối ở bước 1.
+:two: Xây dựng các class bằng Ruby với các phương thức tương ứng để xử lý trên cơ sở dữ liệu đã kết nối ở bước 1.
 
 STEP 1: Tạo project
 
@@ -127,11 +128,14 @@ puts "Find record has id is 6:\n"
 Comics.find(6)
 ```
 
-1) Tôi require file `mybase.rb` đã viết ở bước 3 vào file này.  
-2) Tạo class `Comics` và cho nó kế thừa class `MyBase`  
-3) puts ra màn hình console các dòng lệnh đã xây dựng để xem kết quả (với lệnh `ruby  comics.rb` ta sẽ chạy file comics.rb và xuất kết quả ra màn hình console).   
+:one: Tôi require file `mybase.rb` đã viết ở bước 3 vào file này.  
 
-Cuối cùng project của chúng ta có dạng như sau:  
+:two: Tạo class `Comics` và cho nó kế thừa class `MyBase`  
+
+:three: In ra màn hình console các dòng lệnh đã xây dựng để xem kết quả (với lệnh `ruby  comics.rb` ta sẽ chạy file comics.rb và xuất kết quả ra màn hình console).   
+
+
+:arrow_right: Cuối cùng project của chúng ta có dạng như sau:  
 
 ```
 -- simple-orm  

@@ -4,6 +4,7 @@ date: 2019-04-10
 draft: false
 tags: ["til"]
 categories: ["rails notes"]
+mytag: "Today I learned"
 ---
 
 **SaaS:  Software as a Service**  

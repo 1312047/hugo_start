@@ -4,6 +4,7 @@ date: 2019-06-11
 draft: false
 tags: ["ruby"]
 categories: ["ruby notes"]
+mytag: "Ruby"
 ---
 
 ## Đặt vấn đề
@@ -122,11 +123,11 @@ YellowCat.new.yellow_cat
 # =>  error 
 ```
 
-**Note:** Trong một lớp con kế thừa từ lớp cha, public và protected method của lớp cha có thể được lớp con access thông qua `implicit receiver` and `explicit receiver`. Còn private method thì chỉ có thể được access thông qua `implicit receiver`.
+:arrow_right: **Note:** Trong một lớp con kế thừa từ lớp cha, public và protected method của lớp cha có thể được lớp con access thông qua `implicit receiver` and `explicit receiver`. Còn private method thì chỉ có thể được access thông qua `implicit receiver`.
 
-1. **Implicit receiver**: Không chỉ định đối tượng sẽ thực hiện phương thức.  
+:one: **Implicit receiver**: Không chỉ định đối tượng sẽ thực hiện phương thức.  
 
-2. **Explicit receiver**: Chỉ định rõ ràng đối tượng sẽ thực hiện phương thức.
+:two: **Explicit receiver**: Chỉ định rõ ràng đối tượng sẽ thực hiện phương thức.
 
 ## Kết luận
 

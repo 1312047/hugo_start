@@ -4,6 +4,7 @@ date: 2019-05-08
 draft: false
 tags: ["activerecord", "rails"]
 categories: ["rails notes"]
+mytag: "Rails/ActiveRecord"
 ---
 
 ## Đặt vấn đề

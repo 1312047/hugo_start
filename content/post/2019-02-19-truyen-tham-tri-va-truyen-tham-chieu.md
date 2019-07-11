@@ -4,6 +4,7 @@ date: 2019-02-19
 draft: false
 tags: ["programming", "ruby"]
 categories: ["ruby notes", "programming"]
+mytag: "Ruby"
 ---
 
 ## Đặt vấn đề
@@ -33,7 +34,7 @@ Passing a pointer as a parameter does not mean pass-by-reference.
 
 Xem ví dụ sau đây: 
 
-{% highlight ruby %}
+```ruby
 def xinchao(a)
   a = "Nguyen Van A"
 end
@@ -43,13 +44,13 @@ temp = "Nguyen Van B"
 puts "Kq: Xin Chao #{xinchao(temp)}"
 
 #=> "Kq: Xin Chao Nguyen Van A"
-{% endhighlight %}
+```
 
 Từ ví dụ trên ta có thể rút ra kết luận là ruby `Pass reference`? Vì như bạn đã thấy kết quả là "Nguyen Van A", giá trị mà chúng ta gán trong hàm `xinchao`.
 
 Câu trả lời là không, đây là một ví dụ cạm bẫy nếu ta không cẩn thận, khác với một số ngôn ngữ khác bắt buộc phải sử dụng `return` để trả về kết quả trong function, ruby cho phép ta sử dụng giá trị cuối cùng bạn viết ra trong function đó. Tức kết quả trả về trên đơn giản là kết quả thực hiện của function xinchao, chứ còn việc biến temp có thay đổi giá trị hay không thì chúng ta phải thay thế lại một chút như dưới đây để kiểm chứng:
 
-{% highlight ruby %}
+```ruby
 def xinchao(a)
   a = "Nguyen Van A"
 end
@@ -61,7 +62,7 @@ xinchao(temp)
 puts "Kq: Xin Chao #{temp}"
 
 #=> "Kq: Xin Chao Nguyen Van B"
-{% endhighlight %}
+```
 
 Oh, vậy ruby là `Pass by value`? Đúng, như đã từng đề cập, ruby không có 1 định nghĩa thuần tuý nào về hai khái niệm mà chúng ta đang thảo luận, nên dựa trên những ý chính mà chúng ta đã thống nhất trong mục 1, ta có thể gọi Ruby là 1 một ngôn ngữ `Pass by value`.
 

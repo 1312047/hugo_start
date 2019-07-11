@@ -4,6 +4,7 @@ date: 2019-06-10
 draft: false
 tags: ["rails", "ruby"]
 categories: ["rails notes"]
+mytag: "Rails"
 ---
 
 ## Đặt vấn đề

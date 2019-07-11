@@ -4,6 +4,7 @@ date: 2019-06-16
 draft: false
 tags: ["ruby"]
 categories: ["ruby notes"]
+mytag: "Ruby"
 ---
 
 ## Đặt vấn đề
@@ -153,9 +154,9 @@ end
 
 Tôi có một bài toán:  
 
-1. Tôi có 1 lớp Cat với 2 instance variable là name và age.
-2. Lớp YellowCat là lớp con của Cat.
-3. Lớp YellowCat có thêm 1 instance variable là role.
+:one: Tôi có 1 lớp Cat với 2 instance variable là name và age.  
+:two: Lớp YellowCat là lớp con của Cat.  
+:three: Lớp YellowCat có thêm 1 instance variable là role.  
 
 Xây dựng lớp Cat có vẻ đơn giản, ta làm như sau:  
 
@@ -213,11 +214,11 @@ puts "ten meo la: #{meo2.name} \ntuoi meo la: #{meo2.age} \nrole cua meo la: #{m
 # => role cua meo la: admin
 ```
 
-Ở lớp con chúng ta có thêm 1 instance variable, chúng ta khai báo cho mình nó và duy nhất mỗi nó => không lãng phí vùng nhớ và tận dụng được mã nguồn cũ.  
+Ở lớp con chúng ta có thêm 1 instance variable, chúng ta khai báo cho mình nó và duy nhất mỗi nó :arrow_right: không lãng phí vùng nhớ và tận dụng được mã nguồn cũ.  
 
 Trong phương thức khởi tạo đối tượng YellowCat chúng ta khởi tạo biến instance mới, còn 2 instance variable được kế thừa từ lớp cha thì ta truyền tham số vào `super()` để truyền lên lớp cha và mặc kệ lớp cha xử lý thế nào thì tuỳ.  
 
 ## Kết luận
 
 Tài liệu tham khảo:  
-- [odetocode.com](https://odetocode.com/blogs/scott/archive/2010/07/13/ruby-initialize-and-super.aspx)
+[1] [odetocode.com](https://odetocode.com/blogs/scott/archive/2010/07/13/ruby-initialize-and-super.aspx)

@@ -4,11 +4,15 @@ date: 2018-12-30
 draft: false
 tags: ["unix"]
 categories: ["hệ điều hành"]
+mytag: "OS"
 ---
 
 ## Đặt vấn đề
 
-Đây lại là một bài viết tiếp theo về chủ đề liên quan đến các hệ điều hành và dòng lệnh. Khi mới tiếp xúc với máy tính, OS mà tôi sử dụng là windows, đến khi lên đại học, phần lớn thời gian học tập vẫn gắn liền với windows, còn phần nhỏ thời gian còn lại là làm quen với một hệ điều hành lạ lẫm mang tên Linux. Việc cài đặt phần mềm trên Linux có khó khăn hơn windows một chút, đó là thay vì click chuột rồi next next next next... thì phần nhiều các phần mềm phục vụ công việc lập trình đều phải cài đặt qua dòng lệnh. Mọi thứ không có vấn đề gì cho đến khi việc copy những dòng lệnh đó rồi enter, bạn sẽ không còn nhận được một kết quả thành công mỹ mãn nữa mà thay vào đó là một đống lỗi được trả về. 
+Đây lại là một bài viết tiếp theo về chủ đề liên quan đến các hệ điều hành và dòng lệnh. Khi mới tiếp xúc với máy tính, OS mà tôi sử dụng là windows, đến khi lên đại học, phần lớn thời gian học tập vẫn gắn liền với windows, còn phần nhỏ thời gian còn lại là làm quen với một hệ điều hành lạ lẫm mang tên Linux.  
+
+Việc cài đặt phần mềm trên Linux có khó khăn hơn windows một chút, đó là thay vì click chuột rồi next next next next... thì phần nhiều các phần mềm phục vụ công việc lập trình đều phải cài đặt qua dòng lệnh. Mọi thứ không có vấn đề gì cho đến khi việc copy những dòng lệnh đó rồi enter, bạn sẽ không còn nhận được một kết quả thành công mỹ mãn nữa mà thay vào đó là một đống lỗi được trả về.  
+
 Khi làm việc với Ruby, tôi đã từng gặp những lỗi liên quan đến Rbenv và RVM. Điều đó thực sự là một cơn ác mộng khi liên tục phải google tìm kiếm câu trả lời cho vấn đề gặp phải, copy những dòng lệnh trên stackoverflow paste vào terminal và chờ đợi rằng vấn đề sẽ được giải quyết dù chẳng hiểu dòng lệnh này có nghĩa là gì. Lâu dần tôi đã tích luỹ thêm được một số hiểu biết muốn chia sẻ mà bắt đầu là các File hệt thống.
 
 ## Luận bàn
@@ -21,7 +25,11 @@ Khi làm việc với Ruby, tôi đã từng gặp những lỗi liên quan đ�
 
 Qua đó chúng ta có thể thấy, `Linux` và các hệ điều hành con cháu của `Unix` có rất nhiều điểm chung.
 
-`Shell`: Đây cũng là một khái niệm quan trọng cần tìm hiểu. Trước khi đi vào chủ đề chính của bài viết, để tìm hiểu một cách sâu sắc về Shell, có lẽ sẽ cần đến một bài viết khác, nên ở đây tôi chỉ mô tả một cách bao quát về nó. `Shell` là phần nằm giữa ứng dụng và phần core của hệ điều hành. Hãy tưởng tượng chúng ta có một chồng sách gồm ba quyển với quyển trên cùng là những ứng dụng đang chạy trên máy tính của bạn vì dụ như word, excel, cuốn ở dưới cùng chính là phần nhân của hệ điều hành. Để các ứng dụng của bạn có thể sử dụng các tài nguyên của máy tính như bộ nhớ, ram, IO... điều tất yếu phải xảy ra đó là ứng dụng của bạn phải giao tiếp được với hệ điều hành. Tuy nhiên, vấn đề gặp phải đó là hệ điều hành chỉ hiểu mã máy, một thứ quá phức tạp để người dùng khi sử dụng ứng dụng có thể thao tác được. Đó là lý do ra đời của “quyển sách” ở giữa mà chúng ta gọi là `Shell`. Nhiệm vụ của nó là gì? Đó là chuyển đổi các lệnh từ “quyển sách” đầu tiên thành các lệnh mà “quyển sách” thứ ba có thể hiểu và thực hiện được (Thông dịch).
+`Shell`: Đây cũng là một khái niệm quan trọng cần tìm hiểu. Trước khi đi vào chủ đề chính của bài viết, để tìm hiểu một cách sâu sắc về Shell, có lẽ sẽ cần đến một bài viết khác, nên ở đây tôi chỉ mô tả một cách bao quát về nó. `Shell` là phần nằm giữa ứng dụng và phần core của hệ điều hành.  
+
+Hãy tưởng tượng chúng ta có một chồng sách gồm ba quyển với quyển trên cùng là những ứng dụng đang chạy trên máy tính của bạn vì dụ như word, excel, cuốn ở dưới cùng chính là phần nhân của hệ điều hành. Để các ứng dụng của bạn có thể sử dụng các tài nguyên của máy tính như bộ nhớ, ram, IO... điều tất yếu phải xảy ra đó là ứng dụng của bạn phải giao tiếp được với hệ điều hành.  
+
+Tuy nhiên, vấn đề gặp phải đó là hệ điều hành chỉ hiểu mã máy, một thứ quá phức tạp để người dùng khi sử dụng ứng dụng có thể thao tác được. Đó là lý do ra đời của “quyển sách” ở giữa mà chúng ta gọi là `Shell`. Nhiệm vụ của nó là gì? Đó là chuyển đổi các lệnh từ “quyển sách” đầu tiên thành các lệnh mà “quyển sách” thứ ba có thể hiểu và thực hiện được (Thông dịch).
 
 Ví dụ terminal được xem là một `Shell CLI`, mỗi khi bạn gõ một lệnh bất kỳ trên terminal, nó sẽ chuyển đổi câu lệnh bạn viết thành một câu lệnh khác mà phần nhân hệ điều hành có thể hiểu và thực hiện được.
 
@@ -29,16 +37,16 @@ Ví dụ terminal được xem là một `Shell CLI`, mỗi khi bạn gõ một 
 
 Đã bao giờ bạn tự hỏi chuyện gì sẽ xảy ra tiếp theo khi ta gõ một lệnh trong terminal? Ví dụ:
 
-{% highlight ruby %}
+```ruby
 ls -a
 #=> Hiển thị tất cả file và folder nằm trong current folder.
-{% endhighlight %}
+```
 
 Chúng ta sẽ thường tự an ủi bản thân rằng những câu lệnh đó đã được hệ điều hành lưu lại như một cuốn từ điển để đến khi được gọi chúng sẽ biết tìm câu trả lời ở đâu. Thực tế suy nghĩ trên không hẳn đã sai, mọi thứ trong Unix đều là file, nếu bạn gõ dòng lệnh:
 
-{% highlight ruby %}
+```ruby
 echo $PATH
-{% endhighlight %}
+```
 
 Kết quả bạn nhận được chính là một danh sách các thư mục mà terminal sẽ tìm kiếm câu lệnh bạn gõ theo thứ tự từ trái qua phải. Với một hệ điều hành thuần khiết chưa cài đặt thêm các phần mềm bên ngoài thì PATH sẽ có giá trị mặc định như sau:
 
@@ -70,24 +78,24 @@ Note: Khác với những người anh em khác, terminal trên Macos sẽ chạ
 
 Thứ tự các `dot file` được khởi chạy trên macOS:
 
-{% highlight ruby %}
+```ruby
 #=> etc/profile
 #=> etc/bashrc
 #=> ~/.bash_profile 
 #=> ~/.bash_login (nếu ~/.bash_profile không tồn tại).
 #=> ~/.profile (nếu ~/.bash_profile và ~/.bash_login đều không tồn tại).
-{% endhighlight %}
+```
 
 ### 4.Các file quan trọng trên Linux
 
 Như đã trình bày ở trên, có một sự giống nhau đáng kể giữa `macOS` và `Linux`. Vì vậy, tôi chỉ có một số điều bổ sung như sau: Trên Linux, thông thường chúng ta sẽ có các `dot file` sau đây:
 
-{% highlight ruby %}
+```ruby
 #=> ~/.bash_login (chạy khi login shell)
 #=> ~/.bashrc (chạy khi không login)
 #=> ~/.bash_logout (chạy khi logout shell)
 #=> ~/bash_history (lịch sử trên shell) 
-{% endhighlight %}
+```
 
 ## Kết luận
 

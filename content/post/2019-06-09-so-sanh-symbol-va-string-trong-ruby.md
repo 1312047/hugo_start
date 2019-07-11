@@ -4,6 +4,7 @@ date: 2019-06-09
 draft: false
 tags: ["ruby"]
 categories: ["ruby notes"]
+mytag: "Ruby"
 ---
 
 ## Đặt vấn đề

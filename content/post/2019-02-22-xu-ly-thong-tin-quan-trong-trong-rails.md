@@ -4,6 +4,7 @@ date: 2019-02-22
 draft: false
 tags: ["secure", "rails"]
 categories: ["rails notes"]
+mytag: "Rails/Secure"
 ---
 
 ## Đặt vấn đề

@@ -4,6 +4,7 @@ date: 2019-05-17
 draft: false
 tags: ["solid", "ruby"]
 categories: ["ruby notes", "programming"]
+mytag: "Ruby/SOLID"
 ---
 ## Đặt vấn đề
 
@@ -21,15 +22,15 @@ Phần lớn thời gian một ứng dụng trên tay dev là để maintain, v�
 
 Trước tiên, hãy xem SOLID là viết tắt của những cụm từ gì.  
 
-1. **S**ingle Responsibility Principle
+:one: **S**ingle Responsibility Principle
 
-2. **O**pen/Closed Principle
+:two: **O**pen/Closed Principle
 
-3. **L**iskov Substitution Principle
+:three: **L**iskov Substitution Principle
 
-4. **I**nterface Segregation Principle
+:four: **I**nterface Segregation Principle
 
-5. **D**ependency Inversion Principle
+:five: **D**ependency Inversion Principle
 
 Hàn lâm là vậy nhưng để dễ nhớ thì tôi gọi chúng ngắn gọn là: **S**ingle, **O**pen, **L**iskov, **I**nterface và **D**ependency.  
 
@@ -68,8 +69,6 @@ Câu trả lời đơn giản nhất là chúng ta viết chức năng này luô
 Nếu tôi nói là không vi phạm? Diễn giải của tôi như sau: Trách nhiệm của cái module/class Checkout là thanh toán những mặt hàng bạn đã bỏ vào cart, vậy promotion cũng chỉ một step trong quá trình thanh toán, nên nếu tôi viết code promotion trong module/class Checkout thì tôi vi phạm nguyên tắc SRP chỗ nào?  Checkout vẫn đang làm đúng và duy nhất một 'trách nhiệm' đó là giúp thanh toán đơn hàng và promotion chỉ là phần phụ trợ cho quá trình đó hay nói cách khác promotion chỉ là một bước trong nhiều bước của quá trình thanh toán.  
 
 Vậy tôi có sai khi nói vậy không? Bạn có thể chứng minh là tôi sai nguyên lý SRP được hay không?  
-
-***
 
 1. Tôi nghe nhiều người nói đây là nguyên tắc dễ nhất trong SOLID, theo tôi nó chỉ là nguyên tắc mà định nghĩa dễ học thuộc nhất mà thôi. 
 
@@ -352,8 +351,6 @@ Vậy mà chúng vẫn có thể sử dụng những method mà chúng vốn kh�
 
 Y như ví dụ bên trên: Bạn cần trực nhật lớp 1A thôi mà, cô giáo bạn đưa cho bạn trùm chìa khoá của cả trường làm gì? Cầm thì nặng, mà nhỡ đâu bạn ~~tắt mắt~~ nghịch dại thì hậu quả khôn lường.  
 
-***
-
 Vậy để không vi phạm nguyên tắc này ta có thể sửa lại mã nguồn như sau:  
 
 Class Animal  
@@ -480,4 +477,4 @@ Trên đây là 1 cái nhìn tổng quan về hệ thống nguyên lý SOLID n�
 
 Nguồn tham khảo:  
 
-[https://en.wikipedia.org/wiki/SOLID](https://en.wikipedia.org/wiki/SOLID)
+[1] [https://en.wikipedia.org/wiki/SOLID](https://en.wikipedia.org/wiki/SOLID)

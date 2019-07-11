@@ -4,6 +4,7 @@ date: 2019-05-15
 draft: false
 tags: ["ruby"]
 categories: ["ruby notes"]
+mytag: "Ruby"
 ---
 ## Đặt vấn đề
 
@@ -94,13 +95,13 @@ It would be nice to be able to use Kernel#load in development,
 and Kernel#require in production.
 ```
 
--- trích dẫn guides.rubyonrails --  
+`- trích dẫn guides.rubyonrails -`  
 
-Điều rút ra ở đây là:  
+:arrow_right: Điều rút ra ở đây là:  
 
-1. require sẽ đọc và load file được gọi một lần duy nhất.
+:one: require sẽ đọc và load file được gọi một lần duy nhất.
 
-2. load sẽ đọc và load file được gọi mỗi khi file đó được chạy.
+:two: load sẽ đọc và load file được gọi mỗi khi file đó được chạy.
 
 Từ đó dẫn đến việc là load sẽ hữu dụng khi làm việc tại môi trường development hơn, nơi mà thay đổi diễn ra liên tục, còn require thích hợp khi triển khai lên production.
 
@@ -108,7 +109,7 @@ Note: Sau khi bạn chạy tới method require, nó sẽ đọc file bạn requ
 
 ### 3. So sánh include và extend
 
-Không có nhiều liên hệ với hai mục đầu, 2 phương thức được đề cập trong mục 3 để giải quyết bài tóan mixin trong ruby, như đã có lần tôi trình bày khái quát [tại đây](https://hdchinh.com/ruby/2019/02/24/ruby-method-lookup.html).  
+Không có nhiều liên hệ với hai mục đầu, 2 phương thức được đề cập trong mục 3 để giải quyết bài tóan mixin trong ruby, như đã có lần tôi trình bày khái quát [tại đây](http://localhost:1313/post/2019-02-24-ruby-method-lookup/#2-extend-include-trong-ruby).  
 
 Có vẻ vì cao hứng chém gió title quá, mà tôi quên mất đã viết về hai phương thức này một lần, và hiện tại vẫn chưa có gì để bổ sung thêm, nếu cần hãy đọc lại bài viết tham khảo bên trên nhé.  
 
@@ -116,4 +117,4 @@ Có vẻ vì cao hứng chém gió title quá, mà tôi quên mất đã viết 
 
 Tham khảo:  
 
-- [autoloading_and_reloading_constants](https://guides.rubyonrails.org/autoloading_and_reloading_constants.html)
+[1] [autoloading_and_reloading_constants](https://guides.rubyonrails.org/autoloading_and_reloading_constants.html)

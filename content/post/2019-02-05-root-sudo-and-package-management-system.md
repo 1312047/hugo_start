@@ -4,6 +4,7 @@ date: 2019-02-05
 draft: false
 tags: ["unix"]
 categories: ["hệ điều hành"]
+mytag: "OS"
 ---
 
 ## Đặt vấn đề
@@ -41,7 +42,7 @@ Một nhầm lẫn thường xuyên với cả với tôi ngày mới tìm hiể
 
 Phần đa các trường hợp khi bạn thêm `sudo`, các câu lệnh sẽ chạy một cách hoàn hảo. Tuy nhiên, cũng có những khi bạn không nhận được kết quả như mong đợi và lý do chính là không phải user nào cũng có thể triệu hồi quyền lực của super user. Điều bạn cần làm khi đó là "nói" với hệ điều hành rằng hãy cho user của tôi đang sử dụng được quyền triệu hồi sức mạnh của super user. Hãy xem ví dụ dưới đây:
 
-{% highlight ruby %}
+```ruby
 #=> /etc/sudoers (lưu trữ các user được quyền thực hiện đặc quyền của super user)
 #=> Ví dụ
 root ALL=(ALL:ALL) ALL
@@ -50,7 +51,7 @@ root ALL=(ALL:ALL) ALL
 #=> Chữ all thứ hai chỉ ra, account root có thể chạy lệnh với quyền của bất kỳ user nào.
 #=> Chữ all thứ ba chỉ ra, account root có thể chạy lệnh với quyền của bất kỳ group nào.
 #=> Chữ all cuối cùng chỉ ra, account root có thể chạy bất kỳ command nào.
-{% endhighlight %}
+```
 
 Note: Kể từ khi bạn nhập mật khẩu sau khi gõ lệnh `sudo` lần đầu, thời gian có hiệu lực của mật khẩu này sẽ là 15 phút. Trong khoảng thời gian đó bạn có thể chạy các lệnh `sudo` khác mà hệ điều hành không yêu cầu bạn nhập lại mật khẩu.
 

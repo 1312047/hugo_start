@@ -4,6 +4,7 @@ date: 2019-06-08
 draft: false
 tags: ["secure", "rails"]
 categories: ["rails notes"]
+mytag: "Rails/Secure"
 ---
 
 ## Đặt vấn đề
@@ -63,8 +64,6 @@ Và như vậy dữ liệu website của bạn đã bị lộ trước những k
 Trên đây chỉ là một ví dụ sơ sài, trong thực tế dữ liệu của bạn sẽ quan trọng hơn nhiều là cái products information như trên. Có thể là thông tin liên lạc, địa chỉ nhà, thông tin tài khoản ngân hàng...
 
 ### 2. Cách phòng tránh Sql Injection trong rails.
-
-1. Sử dụng params query
 
 Có thể thấy khi để query dạng string như trên thì rất dễ bị khai thác, vì ActiveRecord sẽ không thể validate giá trị input mà người dùng nhập vào có hợp lệ hay không. Vậy cách tốt nhất để chống lại Sql injection chính là sử dụng query theo params thay vì sử dụng chuỗi như trên.  
 

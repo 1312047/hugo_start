@@ -4,6 +4,7 @@ date: 2019-04-17
 draft: false
 tags: ["rails"]
 categories: ["rails notes"]
+mytag: "Rails"
 ---
 
 ## Đặt vấn đề
@@ -56,4 +57,4 @@ Việc thiết lập này phụ thuộc vào cấu hình của bạn trong thư 
 
 Tham khảo: 
 
-- [autoloading_and_reloading_constants](https://guides.rubyonrails.org/autoloading_and_reloading_constants.html)
+[1] [autoloading_and_reloading_constants](https://guides.rubyonrails.org/autoloading_and_reloading_constants.html)

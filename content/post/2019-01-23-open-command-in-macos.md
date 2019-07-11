@@ -4,6 +4,7 @@ date: 2018-01-23
 draft: false
 tags: ["unix"]
 categories: ["hệ điều hành"]
+mytag: "OS"
 ---
 
 ## Đặt vấn đề
