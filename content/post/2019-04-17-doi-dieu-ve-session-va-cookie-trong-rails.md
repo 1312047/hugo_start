@@ -5,6 +5,7 @@ draft: false
 tags: ["rails", "secure"]
 categories: ["rails notes"]
 mytag: "Rails/Secure"
+mytrend: "COOL"
 ---
 
 ## Đặt vấn đề

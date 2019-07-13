@@ -5,6 +5,7 @@ draft: false
 tags: ["unix"]
 categories: ["hệ điều hành"]
 mytag: "OS"
+mytrend: "COOL"
 ---
 
 ## Đặt vấn đề

@@ -5,6 +5,8 @@ draft: false
 tags: ["random"]
 categories: ["Random"]
 mytag: "Random"
+mytrend: "COOL"
+mytop: "TOP VIEWS"
 ---
 ## Đặt vấn đề
 

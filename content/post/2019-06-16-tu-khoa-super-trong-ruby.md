@@ -1,5 +1,5 @@
 ---
-title: "Từ khoá super trong ruby là gì?"
+title: "Từ khoá super trong Ruby là gì?"
 date: 2019-06-16
 draft: false
 tags: ["ruby"]

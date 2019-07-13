@@ -5,6 +5,8 @@ draft: false
 tags: ["solid", "ruby"]
 categories: ["ruby notes", "programming"]
 mytag: "Ruby/SOLID"
+mytrend: "COOL"
+mytop: "TOP VIEWS"
 ---
 ## Đặt vấn đề
 

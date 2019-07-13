@@ -5,6 +5,7 @@ draft: false
 tags: ["ruby"]
 categories: ["ruby notes"]
 mytag: "Ruby"
+mytrend: "COOL"
 ---
 
 ## Đặt vấn đề

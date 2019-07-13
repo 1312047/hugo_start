@@ -5,6 +5,8 @@ draft: false
 tags: ["rack", "ruby"]
 categories: ["rails notes"]
 mytag: "Ruby/Rack"
+mytrend: "COOL"
+mytop: "TOP VIEWS"
 ---
 
 ### 1. Đặt vấn đề
