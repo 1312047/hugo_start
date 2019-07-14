@@ -109,7 +109,7 @@ Note: Sau khi bạn chạy tới method require, nó sẽ đọc file bạn requ
 
 ### 3. So sánh include và extend
 
-Không có nhiều liên hệ với hai mục đầu, 2 phương thức được đề cập trong mục 3 để giải quyết bài tóan mixin trong ruby, như đã có lần tôi trình bày khái quát [tại đây](http://localhost:1313/post/2019-02-24-ruby-method-lookup/#2-extend-include-trong-ruby).  
+Không có nhiều liên hệ với hai mục đầu, 2 phương thức được đề cập trong mục 3 để giải quyết bài tóan mixin trong ruby, như đã có lần tôi trình bày khái quát [tại đây](https://hdchinh.com/post/2019-02-24-ruby-method-lookup/).  
 
 Có vẻ vì cao hứng chém gió title quá, mà tôi quên mất đã viết về hai phương thức này một lần, và hiện tại vẫn chưa có gì để bổ sung thêm, nếu cần hãy đọc lại bài viết tham khảo bên trên nhé.  
 
