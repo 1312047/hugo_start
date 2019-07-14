@@ -1,9 +1,7 @@
 ---
-title: "Hire me"
-date: 2017-10-10
+title: "About"
 menu: "main"
 mytag: "Life"
-draft: true
 ---
 
 # About me
