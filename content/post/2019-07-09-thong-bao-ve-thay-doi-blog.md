@@ -1,5 +1,5 @@
 ---
-title: "[NEW] Thay đổi đổi Platform"
+title: "[NEWS] Thay đổi đổi Platform"
 date: 2019-07-08
 draft: false
 tags: ["random"]

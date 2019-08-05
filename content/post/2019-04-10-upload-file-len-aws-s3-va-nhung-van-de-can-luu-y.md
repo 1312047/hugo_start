@@ -4,7 +4,7 @@ date: 2019-04-10
 draft: false
 tags: ["aws", "rails", "til"]
 categories: ["rails notes"]
-mytag: "Today I Learned"
+mytag: "TIL"
 ---
 
 Ghi chú này được tham khảo từ bài viết [Lưu trữ file trên Amazon S3](https://viblo.asia/p/ror-luu-tru-file-tren-amazon-s3-BMvRpNXEzwY#_cau-hinh-connect-toi-dich-vu-s3-trong-ung-dung-rails-3) của tác giả `@duyth1993` trên website `viblo.com`.

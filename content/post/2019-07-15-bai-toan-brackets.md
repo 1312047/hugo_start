@@ -36,7 +36,7 @@ Ex:
 
 ### Ý tưởng
 
-Xây dựng giải pháp trên cơ chế `queue`. Nếu gặp ký tự mở (`{`, `[`, `(`) thì bỏ vào queue, nếu gặp ký tự đóng (`}`, `]`, `)`) thì pop phần tử trong queue ra so sánh. Nếu phần tử được pop từ queue với ký tự đang so sánh tạo thành được 1 cặp dấu hợp lệ (`()`, `[]`, `{}`) thì duyệt tiếp, nếu không tạo thành cặp dấu hợp lệ thì trả về false, vì đây không phải chuỗi brackets valid.  
+Xây dựng giải pháp trên cơ chế `stack`. Nếu gặp ký tự mở (`{`, `[`, `(`) thì bỏ vào stack, nếu gặp ký tự đóng (`}`, `]`, `)`) thì pop phần tử trong stack ra so sánh. Nếu phần tử được pop từ stack với ký tự đang so sánh tạo thành được 1 cặp dấu hợp lệ (`()`, `[]`, `{}`) thì duyệt tiếp, nếu không tạo thành cặp dấu hợp lệ thì trả về false, vì đây không phải chuỗi brackets valid.  
 
 ### Implement
 
