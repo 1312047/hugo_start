@@ -1,5 +1,5 @@
 ---
-title: "Immutable vs Mutable"
+title: "Immutable Vs Mutable"
 date: 2019-04-08
 draft: false
 tags: ["ruby", "programming"]
@@ -8,13 +8,13 @@ mytag: "Ruby/Programming"
 mytrend: "COOL"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Vấn đề ở đây là tôi không có vấn đề gì để đặt cả, bài viết nằm trong mớ kiến thức rối bòng bong của tôi, và giờ tôi cần viết lại như một cách để ôn tập, hy vọng nó có thể giúp được ai đó.
 
-## Luận bàn
+# Luận bàn
 
-### 1. Khái niệm mutable, immutable và ruby
+# 1. Khái niệm mutable, immutable và ruby
 
 Đi thẳng vào vấn đề, chúng ta cần đề cập đến ba vấn đề: `mutable`, `immutable` và cách ruby xử lý hai khái niệm đó. Trước hết nếu bạn đã quên, thì tôi xin được nhắc lại định nghĩa của chúng.
 
@@ -74,7 +74,7 @@ Tất cả các loại dữ liệu nguyên thuỷ trong ruby đều là immutabl
 
 Integer, float, string, boolean chúng đều là immutable.
 
-### 2. Liệu đây có phải là một kiến thức cần thiết?
+# 2. Liệu đây có phải là một kiến thức cần thiết?
 
 Chắc chắn là có. 
 
@@ -161,6 +161,6 @@ value: HoangDuy | location: 47196120971580
 value: HoangDuyChinh | location: 47196120971580
 Final value: HoangDuyChinh | location: 47196120971580
 ```
-## Kết luận
+# Kết luận
 
 Trong bài viết có đề cập đến `object_id` và `GC`, đây là hai vấn đề nền tảng trong ruby, hy vọng sẽ có khả năng viết các bài khác về hai chủ đề này, nếu có thắc mắc hay đóng góp cho thiếu xót của tác giả, hãy để lại bình luận bên dưới :smile:.

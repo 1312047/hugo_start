@@ -1,5 +1,5 @@
 ---
-title: "Tìm hiểu về chữ S trong https"
+title: "Tìm Hiểu Về Chữ S Trong Https"
 date: 2019-05-04
 draft: false
 tags: ["https", "secure"]
@@ -7,13 +7,13 @@ categories: ["rails notes"]
 mytag: "Secure/HTTPS"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Đi luôn vào chủ đề, khi mới bắt đầu với môn mạng máy tính ở trường đại học, sự mập mờ khi còn ngồi trên ghế nhà trường khiến chúng ta đôi khi đã nhầm lẫn về `http` và `https`, nhớ ngày đó tôi đã từng nghĩ chúng là 2 giao thức khác nhau, à mà ngày đó tôi có hiểu giao thức là gì không nhỉ :fearful: thôi dẹp qua một bên, bản chất của `https` cũng là giao thức `http` nhưng thêm được chữ `s` ứng với `secure`. Nghe thôi đã thấy bảo mật rồi, `https` ra đời nhằm mục đích làm cho giao thức `http` trở nên an toàn hơn, vậy nó làm cho `http` trở nên an toàn hơn như thế nào?
 
-## Luận bàn
+# Luận bàn
 
-### 1. Http hiểu đơn giản thì hoạt động thế nào?
+# 1. Http hiểu đơn giản thì hoạt động thế nào?
 
 ![hoa](/images/ssl1.png)
 
@@ -26,13 +26,13 @@ Mọi thứ có vẻ good? không hẳn như vậy, việc dữ liệu truyền 
 
 Bài học: Không phải lúc nào cũng nên quá thân thiện với người dùng cuối :worried:
 
-### 2. Https khắc phục vấn đề của http như thế nào?
+# 2. Https khắc phục vấn đề của http như thế nào?
 
 Chúng ta đã nắm được khái quát vấn đề bảo mật gặp phải khi sử dụng `http`. Với những website giải trí thuần tuý với nội dung chủ yếu là hình ảnh âm thanh và không có thông tin cần bảo mật khi không thành vấn đề khi dùng http. Nhưng nếu bạn sử dụng internet banking với http, khi bạn đăng nhập vào tài khoản của mình, gửi một gói tin lên server với username/id và mật khẩu được gửi dưới dạng text trần trụi, bạn thì lại đang truy cập 1 điểm wifi ở 1 cafe house nào đó, nếu có kẻ gian đã có tính toán bủa vây quanh bạn nơi đó, thì còn gì ngăn cản chúng có thể lấy được thông tin đăng nhập của bạn ngay sau khi chúng bắt được gói tin bạn request gửi đi? :disappointed:
 
 Https giải bài toán trên bằng cách, dùng một cách nào đó mã hoá giữ liệu cần `gửi đi/trả về`. Và như vậy là xong, tên hacker xấu xa bỉ bổi vô sỉ (có thể tên là Nhật Duy) trong quán cafe kia sẽ lặng lẽ buồn rầu bỏ cuộc vì dù hắn có bắt được gói tin của bạn thì nó cũng được mã hoá, hắn gãi đầu, gãi tai làm sao để giải mã, làm sao để lấy được thông tin đăng nhập của bạn, cứ thế hắn cứ gãi cứ gãi, còn bạn thì vẫn an toàn (tạm thời).
 
-### 3. Https và vấn đề mã hoá dữ liệu
+# 3. Https và vấn đề mã hoá dữ liệu
 
 Trước tiên phải làm rõ là:
 
@@ -70,12 +70,12 @@ Các bước tối thiểu cần có như sau:
 
 Note: Trong nội dung trên có đề cập đến vấn đề mã hoá rất nhiều, nhưng không hề đề cập đến việc sử dụng thuật toán nào để mã hoá, tôi nghĩ rằng chúng ta nên đọc những tài liệu chính thông để có thông tin xác thực nhất, cá nhân tôi, tôi cũng chưa tìm hiểu :kissing_heart:
 
-### 4. Áp dụng https trong dự án như thế nào?
+# 4. Áp dụng https trong dự án như thế nào?
 
 Như đã trình bày ở mục số 3, https là http có thêm cơ chế ssl, cơ chế ssl bạn có thể sử dụng bởi 1 nhà cung cấp bên thứ 3 (Certificate Authority) ví dụ như GoDaddy, Comodo hay 1 dịch vụ miễn phí như Let’s Encrypt.
 
 Nói chung là vì sử dụng dịch vụ bên thứ 3 nên không thể miêu tả phần này được, mỗi dịch vụ sẽ có những tuỳ biến riêng, âu thì mình cứ follow theo trang chủ cho an tâm nhỉ.
 
-## Kết luận
+# Kết luận
 
 Nói mới nhớ thì thấy mấy anh công ty cũ từng bảo `ranking` google giờ có ảnh hưởng bởi việc bạn sử dụng https hay không, nghe đâu thì việc sử dụng https sẽ giúp bạn có cơ hội bay cao hơn trong bảng rank website của google, có lẽ tôi cũng phải trích rút thời gian sao mà update cái blog nhỏ này lên https, với hi vọng bớt cảnh vắng tanh như chùa bà đanh :pensive:

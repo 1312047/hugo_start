@@ -1,5 +1,5 @@
 ---
-title: "Pass Reference vs Pass Value, Ruby!"
+title: "Pass Reference Vs Pass Value, Ruby!"
 date: 2019-02-19
 draft: false
 tags: ["programming", "ruby"]
@@ -8,13 +8,13 @@ mytag: "Ruby"
 mytrend: "COOL"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Chủ đề bài viết ngày hôm nay vốn đã được khơi gợi mơ hồ trong tôi từ rất lâu, nhớ không nhầm thì đó là từ ngày học môn nhập môn lập trình tại trường KHTN, giảng viên có nói lướt qua về khái niệm này, đơn thuần chỉ là lướt qua thôi,vì dù rằng có đi sâu vào hơn nữa thì sinh viên cũng chỉ tổ ngủ gục. Thoáng cái đã 5,6 năm trôi qua, giờ ngồi đây khi đang chuẩn bị thất nghiệp, tôi có hứng thú tìm lại cảm giác thanh xuân nơi giảng đường bằng cách mò mẫm lại cái chủ đề mà ngày xưa tôi từng học (mà hiểu chưa tinh tường), rồi cũng từng trả lời khi đi phỏng vấn (mà người phỏng vấn cũng chỉ hỏi qua). Ôi chao! sao đau đầu đến thế nhỉ? Định làm một bài viết đầy đủ, tường minh mà có quá nhiều thứ cần phải nghiềm ngẫm lại, đặt phím gõ rồi bỏ thì không nỡ, mà viết thì cũng chưa an tâm cái mình nói là đúng, vậy tôi lựa chọn cách đơn giản hơn, đó là viết một số hiểu biết ban đầu, nhẹ nhàng vào du dương, còn hardcore xin hẹn 1 ngày khác.
 
-## Luận bàn
+# Luận bàn
 
-### 1. Một số ý mà tôi có thể chắc chắn mà chúng ta phải làm rõ như sau:
+# 1. Một số ý mà tôi có thể chắc chắn mà chúng ta phải làm rõ như sau:
 
 1. Không có một định nghĩa chung nào về `pass by value` và `pass by reference`, tuỳ thuộc vào từng ngôn ngữ, chúng lại có cách xử lý và những định nghĩa khác nhau về cách xử lý biến và vùng nhớ. 
 
@@ -29,7 +29,7 @@ The C language is pass-by-value without exception.
 Passing a pointer as a parameter does not mean pass-by-reference.
 ```
 
-### 2. Pass value và reference trong ruby
+# 2. Pass value và reference trong ruby
 
 | Qua thời gian tìm hiểu thì tôi nhận thấy rằng trong ruby không hề có khái niệm rõ ràng về reference hay value, nên mọi kết luận ở đây chỉ là mang tính quy chiếu dựa vào những ý chúng ta đã nói trong mục 1.
 
@@ -69,7 +69,7 @@ Oh, vậy ruby là `Pass by value`? Đúng, như đã từng đề cập, ruby k
 
 Vậy có trường hợp ngoại lệ nào không? Như C++ có cả `Pass by value` và `Pass by reference` đó thôi? Câu trả lời vẫn lại là không, thật tiếc, đó đơn giản là sự định hướng của cha đẻ của từng loại ngôn ngữ.
 
-## Kết luận
+# Kết luận
 
 Điều cần nhớ sau bài viết này chính là việc hiểu khái quát về `Pass by value` và `Pass by reference`, một cách tổng quát, còn chi tiết bên trong phải cần nhiều bài nữa mới có thể làm rõ được vấn đề.
                             

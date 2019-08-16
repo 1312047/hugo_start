@@ -1,15 +1,15 @@
 ---
 title: "Bài toán brackets"
 date: 2019-07-11
-draft: false
+draft: true
 tags: ["Programming"]
 categories: ["algo"]
 mytag: "Algo"
 ---
 
-## Yêu cầu
+# Yêu cầu
 
-### Input
+# Input
 
 Đầu vào là 1 chuỗi chỉ chứa các ký tự nằm trong mảng sau:  
 
@@ -19,7 +19,7 @@ mytag: "Algo"
 
 Ex: `"{{}}"`, `"[(})"` ... 
 
-### Output
+# Output
 
 Trả về kết quả liệu chuỗi đầu vào có phải là một brackets hợp lệ hay không.  
 
@@ -32,13 +32,13 @@ Ex:
 `"{)"` không hợp lệ.  
 `"()([})"` không hợp lệ.  
 
-## Giải pháp
+# Giải pháp
 
-### Ý tưởng
+# Ý tưởng
 
 Xây dựng giải pháp trên cơ chế `stack`. Nếu gặp ký tự mở (`{`, `[`, `(`) thì bỏ vào stack, nếu gặp ký tự đóng (`}`, `]`, `)`) thì pop phần tử trong stack ra so sánh. Nếu phần tử được pop từ stack với ký tự đang so sánh tạo thành được 1 cặp dấu hợp lệ (`()`, `[]`, `{}`) thì duyệt tiếp, nếu không tạo thành cặp dấu hợp lệ thì trả về false, vì đây không phải chuỗi brackets valid.  
 
-### Implement
+# Implement
 
 ```ruby
 # so sánh 2 ký tự có tạo thành 1 cặp dấu hợp lệ hay không

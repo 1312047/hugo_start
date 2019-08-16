@@ -1,7 +1,7 @@
 ---
 title: "[NEWS] Thay đổi đổi Platform"
 date: 2019-07-08
-draft: false
+draft: true
 tags: ["random"]
 categories: ["Random"]
 mytag: "Random"

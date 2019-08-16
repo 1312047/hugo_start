@@ -1,5 +1,5 @@
 ---
-title: "Upload với S3 trong rails"
+title: "Upload Với S3 Trong Rails"
 date: 2019-04-10
 draft: false
 tags: ["aws", "rails", "til"]

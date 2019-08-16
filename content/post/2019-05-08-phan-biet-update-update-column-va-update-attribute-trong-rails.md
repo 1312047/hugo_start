@@ -1,5 +1,5 @@
 ---
-title: "Cập nhật dữ liệu với ActiveRecord"
+title: "Cập Nhật Dữ Liệu Với ActiveRecord"
 date: 2019-05-08
 draft: false
 tags: ["activerecord", "rails"]
@@ -7,11 +7,11 @@ categories: ["rails notes"]
 mytag: "Rails/ActiveRecord"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Ngoài phương thức thông dụng `update` để cập nhật dữ liệu. Rails nói chung hay Activerecord nói riêng còn cung cấp 1 số phương thức khác để thay đổi dữ liệu hiện có, hãy cùng tìm hiểu về chúng.
 
-## Luận bàn
+# Luận bàn
 
 **Chuẩn bị:**  
 
@@ -31,7 +31,7 @@ Ngoài phương thức thông dụng `update` để cập nhật dữ liệu. Ra
 
 5. Trường update_at có được cập nhật hay không?
 
-### 1. Phương thức update
+# 1. Phương thức update
 
 **Instance method:**  
 
@@ -82,7 +82,7 @@ Note:
 
 3. Class method `update` thì có thể cập nhật nhiều record một lúc.
 
-### 2. Phương thức update_attribute và update_attributes
+# 2. Phương thức update_attribute và update_attributes
 
 Phương thức update_attribute nhận 2 tham số truyền vào, với tham số thứ nhất là field cần cập nhật và tham số thứ 2 là giá trị cập nhật (Khác với update, thì tham số truyền vào không thể để dưới dạng hash).  
 
@@ -108,7 +108,7 @@ Note:
 
 3. update_attribute dùng cho cập nhật 1 field còn update_attributes cần khi cập nhật nhiều field.
 
-### 3. Phương update_column và update_columns
+# 3. Phương update_column và update_columns
 
 Phương thức update_column có cú pháp giống như update_attribute, còn phương thức update_columns thì có cú pháp tương tự như update_attributes.   
 
@@ -130,7 +130,7 @@ Note: Với phương thức update_column và update_columns
 
 2. Callback và validate đều **không** được chạy.
 
-## Kết luận
+# Kết luận
 
 Trên đây là một số nội dung cơ bản cần nắm bắt về cách cập nhật cơ sở dữ liệu với activerecord trong rails. Nhìn qua thì những phương thức này có vẻ khá giống nhau và đôi lúc bạn tự hỏi là lý do gì khiến phải sinh ra nhiều phương thức như vậy trong khi chỉ riêng phương thức `update` đã gần như làm được tất cả những gì mà chúng ta nghĩ là cần.  
 

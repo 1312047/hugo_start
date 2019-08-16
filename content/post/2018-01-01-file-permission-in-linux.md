@@ -1,5 +1,5 @@
 ---
-title: "File permission trong Unix là gì?"
+title: "Permission Trong Unix Là Gì?"
 date: 2018-01-01
 draft: false
 tags: ["unix"]
@@ -7,15 +7,15 @@ categories: ["hệ điều hành"]
 mytag: "OS/Permission"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Phần lớn thời gian thời đại học, tôi được học trên nền tảng window với bộ công cụ visual studio và ms sql server. Mọi thứ đều ổn cho đến khi ra trường và đi làm. Môi trường làm việc không còn là window nữa mà chuyển sang gia đình linux-unix. Rất nhiều thứ lạ lẫm, tuy nhiên, cũng như nhiều lập trình viên khác. Copy paste không có gì khó khăn với tôi.
 
 Từ những tutorial trên mạng, với những dòng lệnh tôi không hiểu, nhưng đâu thành vấn đề gì? Nó đang chạy và vậy là đã đủ hạnh phúc cho một cậu lập trình viên thiếu kinh nghiệm mới ra trường rồi. Tuy nhiên, việc phải làm những công việc lặp đi lặp lại hàng ngày mà không thực sự hiểu chúng khiến chúng ta khó chịu. Chẳng hạn như những câu lệnh set permission chẳng hạn.
 
-## Luận bàn
+# Luận bàn
 
-### 1.File permission là gì?
+# 1.File permission là gì?
 
 Tương tự như ngôi nhà của bạn, bạn sống cùng gia đình và thi thoảng có những vị khách ghé thăm. Có những vật dụng trong nhà mà bạn chỉ muốn riêng mình bạn có thể sử dụng, cũng có những đồ vật khác, thứ mà chỉ bạn và gia đình được phép sử dụng, và cũng có những đồ vật mà bạn, gia đình và cả những vị khách đều có thể sử dụng.
 
@@ -23,7 +23,7 @@ Tài nguyên trong unix tương tự như vậy, mọi thứ trong unix đều l
 
 => Đó là lý do permission cần tồn tại.
 
-### 2.Sử dụng là sử dụng thế nào?
+# 2.Sử dụng là sử dụng thế nào?
 
 Hiểu đơn giản như thế này, nhà của bạn, bạn cho tôi vào và cho phép tôi ngồi ghế uống nước xem tivi, nhưng không đồng nghĩa với việc tôi muốn làm gì cái ghế hay cái tivi cũng được. Tôi chỉ có thể sử dụng chứ không được phép thay đổi hay đập phá đồ đạc của bạn.
 
@@ -33,7 +33,7 @@ Trong unix có 3 quyền sử dụng:
 2. Quyền ghi.
 3. Quyền thực thi.
 
-### 3.Các loại người dùng.
+# 3.Các loại người dùng.
 
 1. Owner (người sở hữu file đó - người tạo ra file đó).
 2. Group (nhóm sở hữu file).
@@ -47,7 +47,7 @@ Hiểu đơn giản như việc bạn ở nhà của mình và nghĩ bạn có t
 
 | Vì vậy hãy thật cẩn thận khi sử dụng quyền root trên máy tính. Trong trường hợp máy tính, thì chúng ta là chủ sở hữu nên chúng ta có thể enable hay disable root đi. Trên Mac thì mặc định là disable.
 
-### 4.Cách phân quyền
+# 4.Cách phân quyền
 
 `chmod xyz file/folder`
 
@@ -77,10 +77,10 @@ Hình ảnh minh hoạ:
 Trong nhiều trường hợp để có thể thực hiện được lệnh set permission kể trên, ta phải thêm câu lệnh `sudo`
 vào phía trước. Trong các bài tiếp theo sẽ giải thích về ý nghĩa của câu lệnh này.
 
-### 5.Tham khảo
+# 5.Tham khảo
 
 [1] [guru99](https://www.guru99.com/file-permissions.html)
 
-## Kết luận
+# Kết luận
 
 Trên là 1 cái nhìn tổng quan về phân quyền trên linux. Thế giới unix còn rất nhiều điều thú vị, hi vọng trong thời gian tôi có thể có thời gian để tìm hiểu sâu sắc hơn về nền tảng này.

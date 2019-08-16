@@ -1,5 +1,5 @@
 ---
-title: "Giải thuật, bằng cấp và thái độ"
+title: "Giải Thuật, Bằng Cấp Và Thái Độ"
 date: 2019-02-15
 draft: false
 tags: ["random"]
@@ -8,13 +8,13 @@ mytag: "Random"
 mytrend: "COOL"
 mytop: "TOP VIEWS"
 ---
-## Đặt vấn đề
+# Đặt vấn đề
 
 Có một chủ đề rất đỗi quen thuộc, nhưng cũng rất dễ gây tranh cãi trong giới coding của chúng ta, đó là interview. Chín người thì mười ý, có người quan niệm rằng bằng cấp là thứ tối thượng, nhưng cũng có người dương dương tự đắc rằng chỉ có mỗi giải thuật mới là thứ trường tồn vĩnh cửu... Không thể thoát khỏi guồng quay đó, tôi cũng đã từng lăn tăn rất nhiều, điều gì mới là thứ thực sự quan trọng?
 
-## Luận bàn
+# Luận bàn
 
-### Diễn giải tâm lý
+# Diễn giải tâm lý
 
 Diễn giải chi tiết câu chuyện thêm 1 chút, có một số ý kiến đại diện cho 1 số nhóm lập trình viên mà tôi đã từng gặp như sau:
 
@@ -26,7 +26,7 @@ Diễn giải chi tiết câu chuyện thêm 1 chút, có một số ý kiến �
 
 Trên đây là những nhóm chính trong cái hình hài muôn màu muôn vẻ của giới coding, ngoài ra còn có nhóm nhỏ những người "chém gió" trong CV, nổ kinh nghiệm, hay nhóm chỉ chăm chú chuẩn bị các câu hỏi về lương lậu và khoe bảng thành tích exp dài như sông Hồng :worried: !!!
 
-### Ai đã đúng, ai đã sai?
+# Ai đã đúng, ai đã sai?
 
 Không luận bàn đến việc nhà tuyển dụng thực sự cần gì, và chiến thuật của họ khi phỏng vấn ứng viên sẽ phù hợp với nhóm người nào. Đây không phải phạm trù mà ta có thể thảo luận, đơn giản vì con người là động vật cảm tính, tò mò và cũng đầy sáng tạo, vì thế sẽ chẳng bao giờ có một khuôn mẫu nào để ta tìm hiểu về cách tuyển chọn nhân tài của những con người mà chúng ta thậm chí còn chẳng quen biết.
 
@@ -42,7 +42,7 @@ Nhiều người có thể coi thường nhóm người không học hành bài 
 
 Nhiều người sẽ nghĩ rằng nhóm người đề cao thuật toán chỉ là làm màu, vì cũng như bạn, nếu chúng ta đều đã đi làm thì bạn biết đấy, bạn đã bao giờ phải code 1 cây nhị phân trong công việc hàng ngày chưa? Nói cũng phải, nhưng giải thuật là cuộc chơi đầu óc, những người thực sự giỏi thuật toán họ đủ khả năng để tư duy tốt khi gặp phải những vấn đề khó khăn thực sự  (khả năng giải quyết vấn đề).
 
-### Quan điểm của tác giả
+# Quan điểm của tác giả
 
 Vậy như thế nào là đủ? Với cá nhân tôi, tôi không ~~sùng bái~~ thuật toán, cũng không đề cao bằng cấp. Cái tôi thích là ~~mầm non~~  tiềm năng từ người khác. Đó chính là `Thái độ`, với tôi đây là thứ quan trọng hơn cả. 
 
@@ -60,6 +60,6 @@ Thế nên thứ đầu tiên mà tôi chuẩn bị mỗi khi cần interview l�
 
 :arrow_right: Còn rất nhiều ví dụ khác, nhưng nếu nói về chủ đề này thì có thể nói rất lâu rất lâu cũng không hết.
 
-## Kết luận
+# Kết luận
 
 Cuối cùng thì việc bạn có bằng cấp, giỏi giải thuật hay làm gì đi chăng nữa, thì kỹ năng của bạn phải đáp ứng được cho nhà tuyển dụng mà bạn nhắm tới, nếu không mọi thứ sẽ trở thành vô nghĩa, việc bạn có khả năng code cây đỏ đen trên giấy? Nó chả giúp ích được gì khi chờ đợi bạn đang là những dự án outsourcing dạng maintain đơn giản cả. Cũng với điều đó, việc bạn biết một trăm hay hai ba trăm công nghệ, cũng không giúp đời bạn bớt khổ khi phải code AI hay machine learning đâu. Nên hãy chọn cho mình 1 lựa chọn, yên tâm là đi sai thì đi lại, khi còn trẻ chúng ta còn 1 thứ, đó là thời gian.

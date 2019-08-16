@@ -1,5 +1,5 @@
 ---
-title: "Quy tắc viết code Ruby có thể tốt!"
+title: "Quy Tắc Viết Code Ruby Có Thể Tốt!"
 date: 2019-05-18
 draft: false
 tags: ["coding", "ruby"]
@@ -7,15 +7,15 @@ categories: ["ruby notes"]
 mytag: "Ruby"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Nội dung bài viết là hệ thống lại mốt số cách viết code ruby tốt, phục vụ cho nhu cầu ôn tập của tác giả là chính :smile:  
 
 Vì vậy đây chỉ là một tổng hợp tiếng việt được tham khảo nội dung một cách sâu sắc từ repo [ruby-style-guide](https://github.com/rubocop-hq/ruby-style-guide).
 
-## Luận bàn
+# Luận bàn
 
-### Đặt khoảng trắng  
+# Đặt khoảng trắng  
 
 Đặt khoảng trắng trước và sau toán tử , sau dấu phẩy, dấu hai chấm và dấu chấm phẩy.
 
@@ -216,7 +216,7 @@ KHÔNG DÙNG block comments.
 
 ***
 
-### Cú pháp / Syntax
+# Cú pháp / Syntax
 
 KHÔNG sử dụng :: cho các lời gọi hàm thông thường.  
 
@@ -640,7 +640,7 @@ end
 
 *** 
 
-### Module và Class  
+# Module và Class  
 
 Ưu tiên dùng module_function hơn extend self.  
 
@@ -704,7 +704,7 @@ end
 
 *** 
 
-### Exceptions  
+# Exceptions  
 
 Ưu tiên dùng raise hơn fail.  
 
@@ -760,7 +760,7 @@ end
 
 *** 
 
-### Collections  
+# Collections  
 
 Ưu tiên khai báo mảng hay hash bằng cặp ngoặc hơn là tạo thể hiện, bởi vì đôi khi ta phải truyền đối số.  
 
@@ -828,7 +828,7 @@ hash.each_key { |k| p k }
 hash.each_value { |v| p v }
 ```
 
-## Kết luận
+# Kết luận
 
 Tài liệu tham khảo:  
 

@@ -1,5 +1,5 @@
 ---
-title: "Lưu trữ thông tin bảo mật?"
+title: "Lưu Trữ Thông Tin Bảo Mật?"
 date: 2019-02-22
 draft: false
 tags: ["secure", "rails"]
@@ -8,18 +8,18 @@ mytag: "Rails/Secure"
 mytrend: "COOL"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Khi còn Interns tại Framgia, trong một sản phẩm bắt buộc của chương trình thực tập, tôi còn nhớ, mentor đã yêu cầu tôi làm chức năng gửi mail cho ứng dụng rails. Đây thực sự là một task khó với một người non nớt kinh nghiệm như tôi khi đấy, mà ráng google một lát cũng tìm ra cách làm và áp dụng thành công, tạo PR lòng hân hoan, nào ngờ ngay sau đó tôi đã bị mentor mạt sát một trận kinh hoàng. Nguyên nhân là do trong lúc config môi trường để gửi mail, tôi đã để thông tin email của tôi vào file config và commit lên github, lúc đó nghĩ bụng cũng tức "Gì mà làm khó nhau quá vậy? Interns không lương thôi mà làm gì ghê, commit lên đó thì sao...". Giờ thì hiển nhiên là tôi nhìn nhận được sai lầm đó, và hiểu được những hiểu biết mù mờ về config và bảo mật sẽ khiến ứng dụng của tôi dễ tan tành như thế nào. Ngoài thông tin như email, trong dự án của chúng ta đôi khi còn những thông tin vô cùng quan trọng như key của dịch vụ lưu trữ đám mây, thông tin đăng nhập bên thứ ba, hay một chuỗi bí ẩn được gọi dưới cái tên `secret_key`. Bài viết này sẽ trình bày về cách xử lý những thông tin nhạy cảm kể trên.
 
-## Luận bàn
+# Luận bàn
 
-### 1. Khái quát
+# 1. Khái quát
 
 Bài toán này đơn giản hiểu như sau: Một project bất kỳ sẽ luôn có những thông tin cấu hình vô cùng quan trọng, bắt buộc phải luôn giữ chúng private, còn làm cách nào để giữ chúng private trong rails?
 Câu trả lời là tuỳ vào mỗi phiên bản rails, sẽ có (có thể có) những cách khác nhau để xử lý vấn đề này. Hãy đi đến các dấu mốc cụ thể dưới đây.
 
-### 2. Rails 4.1
+# 2. Rails 4.1
 
 Phiên bản rails này sử dụng một file có tên `secrets.yml`, đây là file sẽ lưu toàn bộ các thông tin nhạy cảm chúng ta đã nói ở trên. 
 Với thiết kế như này ta có hai lựa chọn cho ứng dụng của mình:
@@ -31,7 +31,7 @@ Nhược điểm: dù sử dụng cách nào, thì để ứng dụng hoạt đ�
 
 Note: Thay vì sử dụng file `secrets.yml`, ta có thể sử dụng một file khác như `application.yml`, mục đích và chức năng của chúng là tương đương.
 
-### 3. Rails 5.1
+# 3. Rails 5.1
 
 Sang đến phiên bản rails 5.1, một thay đổi lớn đã tới. Thay vì lưu thông tin dạng text hoặc triệu hồi thông qua biến môi trường, rails khi này cung cấp khả năng mã hoá cho các thông tin nhạy cảm này. 
 Cách chúng hoạt động như sau: 
@@ -65,7 +65,7 @@ Tôi thích dùng `vim` để chỉnh sửa, và tôi không muốn set mặc đ
 
 Note: Một điểm quan trọng bạn cần lưu ý, đó là tới khi viết bài viết này thì tôi vẫn chưa thấy rails sẽ giải mã thông tin mã hoá trong file `secrets.yml.enc`, chúng ta buộc phải làm thủ công để nhắc rails làm điều đó bằng cách thêm vào config file của bạn `config.read_encrypted_secrets = true`. Với câu lệnh setup bên trên, dòng config trên đã được add vào file config của production. Nếu bạn muốn sử dụng tính năng này cho môi trường development thì hãy thêm dòng config này vào file `config/environments/development.rb`.
 
-### 3. Rails 5.2
+# 3. Rails 5.2
 
 Ý tưởng trong rails 5.2 không thay đổi nhiều so với rails 5.1. Nhưng thay vì lưu key để encrypt/decrypt trong file secrets.yml.key giờ nó được lưu trong file `master.key` (tuy nhiên nếu không sử dụng file thì cả rails 5.2 và 5.1 đều có thể gọi biến môi trường RAILS_MASTER_KEY để sử dụng).
 
@@ -92,7 +92,7 @@ Làm gì khi bạn muốn thay thế `master.key`?
 
 3. `EDITOR=vim rails credentials:edit` với lệnh sau bạn sẽ generate lại hai file mới. Việc cần làm bây giờ là paste thông tin ở bước 1 vào editor khi này rồi save lại. 
 
-### 4. secret_key_base
+# 4. secret_key_base
 
 Nếu làm theo hướng dẫn bên trên, ta sẽ thu được một file mã hoá ví dụ: `credentials.yml.enc` có chứa nội dung ngay cả khi ta mới vừa khởi tạo project. Điều gì đã xảy ra? Tôi còn chưa kịp edit thì nó lấy thông tin gì mà mã hoá ra nội dung đó vậy? Câu trả lời là một thứ được tạo kèm project của bạn có tên là `secret_key_base` sẽ là thứ đầu tiên được tự động lưu mã hoá vào file `credentials.yml.enc`.
 
@@ -104,7 +104,7 @@ Sao lại phức tạp như vậy? nó với `RAILS_MASTER_KEY` ở trên có qu
 rails secret
 ```
 
-## Kết luận
+# Kết luận
 
 Hãy để lại bình luận bên dưới nếu bạn có ý kiến khác hoặc phản hồi về nội dung bài viết nhé.
                             

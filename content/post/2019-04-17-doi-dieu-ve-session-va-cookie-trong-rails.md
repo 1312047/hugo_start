@@ -1,5 +1,5 @@
 ---
-title: "Session vs Cookies trong Rails"
+title: "Session Vs Cookies Trong Rails"
 date: 2019-04-17
 draft: false
 tags: ["rails", "secure"]
@@ -8,15 +8,15 @@ mytag: "Rails/Secure"
 mytrend: "COOL"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 `session[:user_id] = @user.id`, dòng code này thật quen thuộc? khi làm chức năng đăng nhập trong những ngày nhập môn, hẳn ai cũng đã từng làm qua hoặc làm gần giống như vậy, ta được dạy rằng, `http` là 1 giao thức không có trạng thái nên request thứ `N + 1` sẽ chẳng thể biết được request thứ `N` đã làm gì, vậy nếu ở lần request thứ `N` chúng ta đã thực hiện hành vi đăng nhập, và `http` thì không có lưu vết lại điều đó, hệ quả là ở lần request tiếp theo, website hiểu như bạn chưa đăng nhập, rất đáng buồn.  
 
 Cũng theo những gì được dạy, `session/cookies` được tạo ra với mục đích làm cho http request có "trạng thái". Vì sao lại để từ trạng thái trong nháy kép, vì thực sự là `http` không bao giờ có trạng thái cả, mà `session/cookies` với khả năng lưu vết của mình có thể giúp website nắm được một số **thông tin** từ client đã request trước đó và làm chúng giống như `http` đã có trạng thái.   
 
 Quá mơ hồ? đúng vậy, khi được dạy điều này tôi cũng thấy thật mơ hồ, wth is trạng thái? phi trạng thái? lưu vết?... Hy vọng bài viết này sẽ giúp người đọc có 1 cái nhìn dễ hiểu hơn về 2 đối tượng này trong ruby on rails.
-## Luận bàn
+# Luận bàn
 
-### 1. Flow hoạt động
+# 1. Flow hoạt động
 
 Một cách ngắn gọn cookies sẽ được vận hành như sau:
 
@@ -28,7 +28,7 @@ Một cách ngắn gọn cookies sẽ được vận hành như sau:
 
 **Step 4**: ABC.com lại nhận được request của bạn, và lần này nó đã thấy bạn mang cookies của ABC.com nên nó sẽ đọc nội dung trong cookies đó (nếu cần).
 
-### 2. Một vài loại cookies quan trọng trong rails
+# 2. Một vài loại cookies quan trọng trong rails
 
 1. `Normal cookies`: Một dạng cookie mà dữ liệu được lưu trữ dưới dạng text.
 
@@ -69,7 +69,7 @@ Nhận xét:
 Việc sử dụng loại cookies nào sẽ đúng trong những trường hợp cụ thể, với những dữ liệu vô hại và không hề quan trọng thì sử dụng cookies thông thường và lưu mọi thứ dưới dạng text là khả dĩ hơn cả. Bỏ qua các bước mã hóa giúp nó hoạt động với performance tốt hơn hẳn 2 dạng cookies còn lại.   
 Ngược lại, encrypted cookies là dạng cookies tốn công sức để xử lý nhất, vì vậy hãy chỉ sử dụng nó cho những thông tin thực sự quan trọng và không thể để lộ (những thông tin bớt quan trọng hơn và chỉ cần đảm bảo tính toàn vẹn của dữ liệu chứ không cần bảo mật thông tin thì hãy dùng signed cookies).
 
-### 3. Giải mã cookies và tìm hiểu về session trong rails
+# 3. Giải mã cookies và tìm hiểu về session trong rails
 
 Sau khá nhiều công sức tìm kiếm, tôi đã tìm ra cách để giải mã cookies trong rails 5.2, nội dung đơn giản như sau: 
 
@@ -141,7 +141,7 @@ Bây giờ tôi add thêm 1 giá trị vào session với câu lệnh `session[:
 
 Session bây giờ đã có thêm một key mới là `user_id` với giá trị là `1`. À vậy cuối cùng thì session cũng là 1 `hash` thôi nhỉ. 
 
-## Kết luận
+# Kết luận
 
 Để phân biệt các client khác nhau, server sẽ dựa vào `session_id` được lưu trong cookies, vì vậy nếu chiếm được cookies đăng nhập trên website ABC.com của bạn, các hacker có thể dùng nó để giả mạo bạn và request lên server, đáng buồn thay server sẽ đọc cookies được hacker request lên, sử dụng `secret_key_base` để giải mã cookies và đọc nội dung bên trong, đoạn code xử lý login lại đọc từ session[:user_id], lúc này thì cookies kia có giá trị `session[:user_id] = 1` và thế là server đã tưởng rằng hacker chính là bạn.  
 

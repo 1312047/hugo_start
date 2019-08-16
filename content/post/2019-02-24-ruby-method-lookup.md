@@ -1,5 +1,5 @@
 ---
-title: "Ruby method lookup"
+title: "Ruby Method Lookup"
 date: 2019-02-24
 draft: false
 tags: ["ruby"]
@@ -8,13 +8,13 @@ mytag: "Ruby"
 mytrend: "COOL"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Cũng như nhiều ngôn ngữ khác, trong ruby, khi làm việc với một đối tượng thì có hai thứ ta phải quan tâm chính đó là thuộc tính của đối tượng và phương thức mà đối tượng có thể sử dụng (à mà gần như mọi thứ trong ruby đều là `object` nên đây là một kiến thức cơ bản nhưng cũng rất quan trọng cần phải nắm rõ). Việc ta có thể sử dụng phương thức của đối tượng thông qua dấu `.` không phải là gì mới mẻ, nhưng có một số điều đáng ghi nhớ về cách mà ruby tìm kiếm phương thức.
 
-## Luận bàn
+# Luận bàn
 
-### 1. Method Lookup
+# 1. Method Lookup
 
 Đã khi nào bạn tự hỏi, giả sử nếu bạn có một class A, và class này include thêm hai module vào nữa, nếu trong hai module đó cùng định nghĩa một phương thức, vậy khi instance của A gọi đến phương thức đó, điều gì sẽ xảy ra? Phương thức trong module nào được chạy?
 
@@ -122,7 +122,7 @@ Làm tương tự rồi ta sẽ tìm ra thứ tự ưu tiên kết quả như sa
 
 Nếu bạn đang còn một chút bối rối vì những từ khoá và cách sử dụng `extend` và `include` hãy đọc tiếp mục dưới.
 
-### 2. Extend, Include trong Ruby
+# 2. Extend, Include trong Ruby
 
 Trong ruby không có đa kế thừa, thay vào đó ruby sử dụng `mixin`.
 
@@ -132,6 +132,6 @@ Một class chỉ được kế thừa từ một class khác. Tuy nhiên nó đ
 
 `extend:` đúng với ngữ nghĩa của nó, `mở rộng`, `extend` có thể dùng để mở rộng một class hoặc cũng có thể dùng để mở rộng một instance.  Trong ví dụ trên mục 1, tôi `extend` object `m`, từ đó giúp m được mở rộng thêm các phương thức ứng với tất cả các `instance method` trong module nó extend (đây là "mở rộng" cho một đối tượng). Nếu tôi muốn mở rộng cho một class, tôi sẽ extend moudle trong class đó, và sau đó tất cả các `instance method` trong module sẽ trở thành như các `class method` cho class (đây là sự "mở rộng" cho một lớp). Vậy còn `module method` trong moudle thì sao?Câu trả lời vẫn như trên, những phương thức module thì để module đó sử dụng.
 
-## Kết luận
+# Kết luận
 
 Mixin là một chức năng mạnh mẽ trong ruby, nó giúp ta mở rộng class/object bằng các method mới. Tuy nhiên, hãy cẩn thận để đảm bảo bạn gọi đúng được method mà bạn cần.

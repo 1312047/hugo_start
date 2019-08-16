@@ -1,5 +1,5 @@
 ---
-title: "Bash file trên Unix"
+title: "Bash File Trên Unix"
 date: 2018-12-30
 draft: false
 tags: ["unix"]
@@ -9,7 +9,7 @@ mytrend: "COOL"
 mytop: "TOP VIEWS"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Đây lại là một bài viết tiếp theo về chủ đề liên quan đến các hệ điều hành và dòng lệnh. Khi mới tiếp xúc với máy tính, OS mà tôi sử dụng là windows, đến khi lên đại học, phần lớn thời gian học tập vẫn gắn liền với windows, còn phần nhỏ thời gian còn lại là làm quen với một hệ điều hành lạ lẫm mang tên Linux.  
 
@@ -17,11 +17,11 @@ Việc cài đặt phần mềm trên Linux có khó khăn hơn windows một ch
 
 Khi làm việc với Ruby, tôi đã từng gặp những lỗi liên quan đến Rbenv và RVM. Điều đó thực sự là một cơn ác mộng khi liên tục phải google tìm kiếm câu trả lời cho vấn đề gặp phải, copy những dòng lệnh trên stackoverflow paste vào terminal và chờ đợi rằng vấn đề sẽ được giải quyết dù chẳng hiểu dòng lệnh này có nghĩa là gì. Lâu dần tôi đã tích luỹ thêm được một số hiểu biết muốn chia sẻ mà bắt đầu là các File hệt thống.
 
-## Luận bàn
+# Luận bàn
 
 Để bắt đầu chia sẻ về những file kể trên, có lẽ chúng ta sẽ phải điểm qua một số khái niệm cơ bản.
 
-### 1.Một số khái niệm cơ bản.
+# 1.Một số khái niệm cơ bản.
 
 `Unix` là một hệ điều hành ra đời đã rất lâu, nó là tiền thân của hai nhánh hệ điều hành rất nổi tiếng khác, bản thương mại chính là `macOS` và bản mã nguồn mở chính là `GNU`. Cho đến những năm 90, có một sự kết hợp giữa các phần mềm của `GNU` và phần core của một dự án mã nguồn mở khác tên là `Linux` đã tạo thành một hệ điều hành hoàn chỉnh mang tên là `GNU/Linux`, ngày nay đa số chúng ta chỉ thường gọi tắt là `Linux`
 
@@ -35,7 +35,7 @@ Tuy nhiên, vấn đề gặp phải đó là hệ điều hành chỉ hiểu m�
 
 Ví dụ terminal được xem là một `Shell CLI`, mỗi khi bạn gõ một lệnh bất kỳ trên terminal, nó sẽ chuyển đổi câu lệnh bạn viết thành một câu lệnh khác mà phần nhân hệ điều hành có thể hiểu và thực hiện được.
 
-### 2.Điều gì xảy ra khi bạn gõ một lệnh trên terminal?
+# 2.Điều gì xảy ra khi bạn gõ một lệnh trên terminal?
 
 Đã bao giờ bạn tự hỏi chuyện gì sẽ xảy ra tiếp theo khi ta gõ một lệnh trong terminal? Ví dụ:
 
@@ -68,7 +68,7 @@ Trong terminal, bạn có thể nối thêm một thư mục vào chuỗi PATH b
 
 `export PATH="$PATH:new_path"`	
 
-### 3.Một số file quan trọng trên Macos.
+# 3.Một số file quan trọng trên Macos.
 
 Khi quá trình làm việc với terminal nhiều hơn và chúng ta cần cài đặt một số thứ cần thiết trong quá trình làm việc, chúng ta sử dụng các `dot file`. Nội dung của các `dot file` này là các câu lệnh shell script (chức năng của câu lệnh này có thể chúng ta sẽ tìm hiểu sau). 
 
@@ -88,7 +88,7 @@ Thứ tự các `dot file` được khởi chạy trên macOS:
 #=> ~/.profile (nếu ~/.bash_profile và ~/.bash_login đều không tồn tại).
 ```
 
-### 4.Các file quan trọng trên Linux
+# 4.Các file quan trọng trên Linux
 
 Như đã trình bày ở trên, có một sự giống nhau đáng kể giữa `macOS` và `Linux`. Vì vậy, tôi chỉ có một số điều bổ sung như sau: Trên Linux, thông thường chúng ta sẽ có các `dot file` sau đây:
 
@@ -99,6 +99,6 @@ Như đã trình bày ở trên, có một sự giống nhau đáng kể giữa 
 #=> ~/bash_history (lịch sử trên shell) 
 ```
 
-## Kết luận
+# Kết luận
 
 Còn rất nhiều điều cần nói và bàn luận thêm trong các bài viết tiếp theo.

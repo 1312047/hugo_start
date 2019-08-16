@@ -1,5 +1,5 @@
 ---
-title: "Public, private và protected"
+title: "Public, Private Và Protected"
 date: 2019-06-11
 draft: false
 tags: ["ruby"]
@@ -7,7 +7,7 @@ categories: ["ruby notes"]
 mytag: "Ruby"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Khi còn học đại học, chúng ta được học về tầm vực của các phương thức như sau:  
 
@@ -19,7 +19,7 @@ Khi còn học đại học, chúng ta được học về tầm vực của cá
 
 Những trích rút trên dựa theo ngôn ngữ mà chúng ta cùng theo đuổi ngày đại học C++. Vậy với Ruby? Liệu những phát biểu trên liệu còn đúng?
 
-## Luận bàn
+# Luận bàn
 
 Không, những trích rút trên không còn đúng đắn hoàn toàn với ngôn ngữ Ruby. Có một số khác biệt. Trong bài viết này chúng ta sẽ đi sơ qua về nó.  
 
@@ -27,7 +27,7 @@ Không, những trích rút trên không còn đúng đắn hoàn toàn với ng
 
 => Vì đây không phải kiến thức cao siêu gì cả, có vô vàn tài liệu anh ngữ đề cập đến nó rồi và tôi không thấy cái lý do gì để cố đọc tài liệu thật nhiều, translate thật đã tay, rồi vietsub ra một bài viết dài như sông Hồng để nói về một chủ đề vô cùng normal để thể hiện bản thân cả :smile:  
 
-### Lấy một ví dụ  
+# Lấy một ví dụ  
 
 ```ruby
 class Cat
@@ -63,7 +63,7 @@ Cat.new.cat_hello_private
 
 **Note:** public có thể gọi ngoài tầm vực của một class, những method còn lại thì không. Đồng nghĩa với việc bạn chỉ cần đảm bảo ref được file chưa class có phương thức public đó thì bạn có thể thoải mái gọi phương thức này.
 
-### Thêm một class con kế thừa
+# Thêm một class con kế thừa
 
 ```ruby
 class YellowCat < Cat; end
@@ -78,7 +78,7 @@ YellowCat.new.cat_hello_public
 
 **Note:** Phương thức public có thể được gọi công khai bởi class kế thừa của class chưa phương thức đó.  
 
-### Gọi 3 phương thức Cat trong một method thuộc YellowCat
+# Gọi 3 phương thức Cat trong một method thuộc YellowCat
 
 ```ruby
 class YellowCat < Cat
@@ -101,7 +101,7 @@ YellowCat.new.yellow_cat
 
 **Note:** Cả 3 dạng phương thức đều có thể được gọi trong lớp con (Trong lớp con nhé).
 
-### Trong phương thức yellow_cat khai báo một đối tượng Cat và gọi tới 3 phương thức
+# Trong phương thức yellow_cat khai báo một đối tượng Cat và gọi tới 3 phương thức
 
 ```ruby
 class YellowCat < Cat
@@ -129,6 +129,6 @@ YellowCat.new.yellow_cat
 
 :two: **Explicit receiver**: Chỉ định rõ ràng đối tượng sẽ thực hiện phương thức.
 
-## Kết luận
+# Kết luận
 
 Nếu có đóng góp về bài viết hoặc ghét thái độ tác giả viết bài sơ sài hời hợt thì hãy để lại bình luận nhé. 

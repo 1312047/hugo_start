@@ -1,5 +1,5 @@
 ---
-title: "Vài trình thông dịch cho Ruby"
+title: "Vài Trình Thông Dịch Cho Ruby"
 date: 2019-02-20
 draft: false
 tags: ["ruby"]
@@ -7,13 +7,13 @@ categories: ["ruby notes"]
 mytag: "Ruby"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Đây lại là một bài viết về chủ đề `core`, phức tạp hoá những thứ mà bình thường đi làm coder ta đa phần là không cần dùng đến. Hôm nay sẽ là các trình thông dịch trong ruby. 
 
-## Luận bàn
+# Luận bàn
 
-### 1. Ruby chạy code của bạn như nào?
+# 1. Ruby chạy code của bạn như nào?
 
 Trước khi nói về các trình thông dịch, tôi xin nêu khái quát về quá trình ruby thực thi mã code của bạn. 
 Với bất cứ đoạn mã ruby nào, mã nguồn bạn viết sẽ trải qua các bước sau để có thể tới được trình thông dịch (chủ đề mà ta đang tìm hiểu).
@@ -24,7 +24,7 @@ Với bất cứ đoạn mã ruby nào, mã nguồn bạn viết sẽ trải qua
 
 `Compile`: Đến bước này, ruby sẽ biên dịch kết quả ở bước 2 thành `bytecode` và truyền kết quả biên dịch được sang cho máy ảo ruby (là phần mà chúng ta đang tìm hiểu trong bài viết).
 
-### 2. CRuby, MRI, YARV, KRI
+# 2. CRuby, MRI, YARV, KRI
 
 Để kiểm tra xem ruby trên máy tính của bạn đang sử dụng trình thông dịch nào, hãy mở `irb` và sử dụng lệnh sau:
 
@@ -60,7 +60,7 @@ It was released as part of Ruby 1.9.0 on December 26, 2007, replacing Ruby MRI.
 
 Qua vài trích dẫn kể trên, bạn có thể thấy đơn giản những khái niệm `CRuby`, `YARV`, `MRI`, `KRI` đều nhằm mô tả về một trình thông dịch được sử dụng mặc định cho ruby (tuỳ phiên bản sẽ có khác nhau, hiểu theo nghĩa là một sự update thay vì là thay thế).
 
-### 3. JRuby
+# 3. JRuby
 
 Còn một vài trình thông dịch khác mà tôi đã đọc được, nhưng `JRuby` là phần cuối mà chúng ta sẽ tìm hiểu, vì những những trình thông dịch còn lại không được phổ biến cho lắm. 
 
@@ -76,7 +76,7 @@ Một số ý kiến xoay quanh `JRuby`
 
 Vậy sẽ là một thảm hoạ nếu sử dụng `JRuby` để làm trình thông dịch cho ruby trong những ứng dụng nhỏ, hoạt động đơn giản và không cần tốc độ quá cao.
 
-## Kết luận
+# Kết luận
 
 Trên đây là một số khái quát về lịch sử và hành trình của các trình thông dịch Ruby. Nếu có sai xót, xin hãy để lại bình luận ở dưới bài viết.
                             

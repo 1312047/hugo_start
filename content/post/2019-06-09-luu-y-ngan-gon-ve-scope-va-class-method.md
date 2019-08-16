@@ -1,18 +1,18 @@
 ---
-title: "So sánh Class Method và Scope"
+title: "So Sánh Class Method Và Scope"
 date: 2019-06-09
 draft: false
 tags: ["ruby", "rails"]
 categories: ["rails notes"]
 mytag: "Rails"
 ---
-## Đặt vấn đề
+# Đặt vấn đề
 
 Trong một thời gian rất lâu, từ khi mới học đến khi làm những ứng dụng đầu tiên. Tôi luôn cho rằng Scope và và Class Method hoàn toàn giống nhau. Và lý do Scope xuất hiện là để giúp mã nguồn ngắn gọn hơn.  
 
 Nhưng rõ ràng đấy là một suy nghĩ chưa đúng, dưới đây là điểm cần chú ý về 2 phương thức này.  
 
-## Luận bàn
+# Luận bàn
 
 Tôi có 1 scope:  
 
@@ -82,6 +82,6 @@ Product.by_type(nil).is_active
 
 Scope luôn luôn trả về một `ActiveRecord Relation`. Còn Class Method thì sao? Nếu bạn không cover trường hợp **nil/blank** thì nó sẽ văng về **nil/blank** như vậy không thể chạy Class Method phía sau, vì method đó không thể chạy **với nil/blank**. :smile:  
 
-## Kết luận
+# Kết luận
 
 Đây là một kết luận sơ sài được tôi rút ra trong quá trình làm việc. Nếu có sai xót hãy để lại bình luận dưới đây.

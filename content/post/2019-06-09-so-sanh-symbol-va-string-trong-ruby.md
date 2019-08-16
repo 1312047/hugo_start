@@ -1,5 +1,5 @@
 ---
-title: "Symbol và String trong Ruby"
+title: "Symbol Và String Trong Ruby"
 date: 2019-06-09
 draft: false
 tags: ["ruby"]
@@ -8,7 +8,7 @@ mytag: "Ruby"
 mytrend: "COOL"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Symbol là khái niệm rất quen tai và quen tay với lập trình viên ruby, ắt hẳn ai cũng đã từng nghe không ít thì nhiều, bản thân symbol cũng xuất hiện rất thường xuyên trong rails framework.   
 
@@ -17,9 +17,9 @@ Khi tôi là thực tập sinh, tôi nhận được nhiều lời khuyên về 
 Có một lý giải đơn giản và dễ nhớ để phân biệt giữa 2 đối tượng này đó là: Symbol mà giá trị giống nhau thì có cùng object_id, còn String thì dù giá trị giống nhau, mỗi chuỗi vẫn sẽ có một object_id khác nhau.  
 Liệu lý giải này đã đủ? Hãy cùng tìm hiểu.
 
-## Luận bàn
+# Luận bàn
 
-### 1. Khai báo và tư tưởng
+# 1. Khai báo và tư tưởng
 
 Để khai báo một symbol bạn thêm dấu `:` đằng trước.  
 
@@ -37,7 +37,7 @@ Liệu lý giải này đã đủ? Hãy cùng tìm hiểu.
 
 2. Symbol là một [immutable](https://hdchinh.com/programing/2019/04/08/immutable-va-mutable-trong-ruby.html).
 
-### 2. Mutable và Immutable
+# 2. Mutable và Immutable
 
 Tôi đã từng trình bày một bài viết về chủ đề này. Các bạn có thể tham khảo tại [đây](https://hdchinh.com/programing/2019/04/08/immutable-va-mutable-trong-ruby.html).
 
@@ -79,7 +79,7 @@ Hãy cùng thử với symbol.
 
 Thật tuyệt, vậy là bằng một cách nào đó, khi sử dụng symbol, ruby biết được symbol này đã tồn tại hay chưa, nếu tồn tại rồi thì khi được gọi chúng sẽ dùng lại đối tượng đã có chứ không tạo thêm vùng nhớ mới.  
 
-### 3. Symbol và String được lưu trữ như nào. 
+# 3. Symbol và String được lưu trữ như nào. 
 
 Một tiêu đề có vẻ buồn cười, vì cái đối tượng trong ruby tất nhiên được lưu ở bộ nhớ trong với phân vùng gọi là heap.  
 
@@ -104,7 +104,7 @@ puts Symbol.all_symbols
 puts Symbol.all_symbols.size
 ```
 
-### 4. Về tốc độ thực thi 
+# 4. Về tốc độ thực thi 
 
 Qua những gì để phân tích. Ta rút ra một kết luận là Symbol thì tiết kiệm vùng nhớ một cách đáng kể so với String (xem lại cơ chế lưu vào table bên trên).
 
@@ -128,7 +128,7 @@ Và thế là ta đã hiểu performance, Symbol win ez.
 
 Để thử nghiệm bạn có thể sử dụng thư viện benchmark để kiểm nghiệm kết luận.
 
-### 5. Điểm yếu của Symbol
+# 5. Điểm yếu của Symbol
 
 Nếu Symbol toàn năng, toàn thiện thì đã không có lý do gì nó không thay thế luôn String. Bản chất của điểm yếu của Symbol cũng chính là điểm mạnh của nó.  
 
@@ -140,6 +140,6 @@ Tuy nhiên, Symbol là immutable mà phương thức `upcase!` lại có mục t
 
 Trong trường hợp này rõ ràng sử dụng String là điều hiển nhiên.  
 
-## Kết luận
+# Kết luận
 
 Nếu có nhận xét hoặc phản hồi hãy để lại phản hồi bên dưới nhé.

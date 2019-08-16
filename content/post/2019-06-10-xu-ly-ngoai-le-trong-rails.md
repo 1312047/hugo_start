@@ -1,5 +1,5 @@
 ---
-title: "Exception trong Rails"
+title: "Exception Trong Rails"
 date: 2019-06-10
 draft: false
 tags: ["rails", "ruby"]
@@ -7,7 +7,7 @@ categories: ["rails notes"]
 mytag: "Rails"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Tôi có một số tình huống diễn ra hàng ngày về con mèo của tôi. Nếu nó đói tôi cho nó ăn, nếu nó đi vs lung tung tôi sẽ dọn dẹp chúng.  
 
@@ -17,9 +17,9 @@ Ví dụ như máy tính của bạn không được thiết kế để thực h
 
 Trong bài viết này chúng ta sẽ tìm hiểu về exception trong ruby.  
 
-## Luận bàn
+# Luận bàn
 
-### 1. Tìm hiểu về Exception
+# 1. Tìm hiểu về Exception
 
 Đầu tiên chúng ta phải ghi nhớ rằng khi một exception được gọi, chương trình của bạn sẽ ngừng và đoạn code phía sau không thể chạy được nữa.  
 
@@ -52,7 +52,7 @@ Quay về với ví dụ đơn giản là chia cho số 0:
 
 Flow logic đơn giản về exception như trên.  
 
-### 2. Làm sao để lấy về đối tượng Exception
+# 2. Làm sao để lấy về đối tượng Exception
 
 Như chúng ta đã biết, gần như mọi thứ trong ruby đều là object(Ngoại trừ method và block). Vậy nên Exception cũng là một đối tượng. 
 
@@ -76,7 +76,7 @@ end
 
 Tôi có thể dùng e để xuất ra các thông tin mà tôi cần như class name hay message thông báo lỗi.
 
-### 3. Xây dựng một class Exception
+# 3. Xây dựng một class Exception
 
 Một sự thật hiển nhiên là những thiết kế có sẵn không bao giờ có thể cover cho tất cả các trường hợp có thể xảy ra trong thực tiễn. Đôi lúc bạn muốn thêm một exception để cover cho trường hợp của riêng dự án của bạn thì sao?  
 
@@ -95,13 +95,13 @@ raise MeoException.new(params_gi_do_ma_ban_muon)
 
 Vậy trong class class `MeoException` ta sẽ thiết kế những gì? :smile: Tôi cũng chưa tìm hiểu.
 
-### 4. Các lớp Exception có sẵn trong Ruby
+# 4. Các lớp Exception có sẵn trong Ruby
 
 ![hoa](/images/ruby-exception.jpg)
 
 Đây là sơ đồ về các lớp exception trong ruby, nếu ta rescue một exception X, X lại có dăm 3 exception con, thì chỉ cần chương trình của bạn phát sinh vấn đề và trả ra một exception con nào đó thì X được gọi.
 
-### 5. Cách bắt Exception hợp lý
+# 5. Cách bắt Exception hợp lý
 
 **Cách 1:** 
 
@@ -139,6 +139,6 @@ end
 
 Đây là cách tốt nhất, ta goi trực tiếp đến trường hợp ngoại lệ mà ta cần bắt lấy và xử lý. 
 
-## Kết luận
+# Kết luận
 
 Nếu có phản hồi hãy để lại bình luận bên dưới bài viết.

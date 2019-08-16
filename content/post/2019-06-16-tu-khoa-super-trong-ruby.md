@@ -1,5 +1,5 @@
 ---
-title: "Từ khoá super trong Ruby là gì?"
+title: "Từ Khoá Super Trong Ruby?"
 date: 2019-06-16
 draft: false
 tags: ["ruby"]
@@ -7,7 +7,7 @@ categories: ["ruby notes"]
 mytag: "Ruby"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Kế thừa là một 1 trong 4 yếu tố cốt lõi tạo nên đặc tính hướng đối tượng của một ngôn ngữ (như những gì chúng ta đã được dạy ở trường). Riêng điều đó thôi đã đủ để thể hiện tầm quan trọng của nó (có thật không nhỉ :grimacing:).  
 
@@ -15,9 +15,9 @@ Trong ngôn ngữ ruby có một từ khoá thường xuyên xuất hiện khi c
 
 Qua bài viết chúng ta sẽ cùng tìm hiểu về nó.
 
-## Luận bàn
+# Luận bàn
 
-### 1. Định nghĩa
+# 1. Định nghĩa
 
 ```
 It calls a method on the parent class with the same name as the method that calls super.
@@ -35,7 +35,7 @@ end
 
 => Khi ta gọi phương thức `testing` với một instance của lớp Dog, ruby sẽ đi đến class cha/ông/cụ/kỵ... của `Dog` để tìm và chạy phương thức `testing` được implement ở lớp cha/ông/cụ/kỵ... đó.
 
-### 2. So sánh super và super()
+# 2. So sánh super và super()
 
 Với những bạn mới học, chúng ta đôi lúc sẽ nhầm lẫn là 2 cách gọi này thực chất là một, cũng bởi vì ruby cho phép sử dụng `()` như một optional, tức là có cũng được mà không có cũng được.  
 
@@ -150,7 +150,7 @@ class YellowCat < Cat
 end
 ```
 
-### 3. Sự hữu ích của super()
+# 3. Sự hữu ích của super()
 
 Tôi có một bài toán:  
 
@@ -218,7 +218,7 @@ puts "ten meo la: #{meo2.name} \ntuoi meo la: #{meo2.age} \nrole cua meo la: #{m
 
 Trong phương thức khởi tạo đối tượng YellowCat chúng ta khởi tạo biến instance mới, còn 2 instance variable được kế thừa từ lớp cha thì ta truyền tham số vào `super()` để truyền lên lớp cha và mặc kệ lớp cha xử lý thế nào thì tuỳ.  
 
-## Kết luận
+# Kết luận
 
 Tài liệu tham khảo:  
 [1] [odetocode.com](https://odetocode.com/blogs/scott/archive/2010/07/13/ruby-initialize-and-super.aspx)

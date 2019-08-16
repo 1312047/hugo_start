@@ -1,5 +1,5 @@
 ---
-title: "Cục nợ N + 1 và hướng xử lý"
+title: "Cục Nợ N + 1 Và Hướng Xử Lý"
 date: 2019-02-25
 draft: false
 tags: ["database", "rails"]
@@ -7,13 +7,13 @@ categories: ["rails notes"]
 mytag: "Rails/ActiveRecord"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Có thể bạn đã từng nghe qua về N+1, đây là một chủ để cơ bản trong vấn đề quản lý csdl trong code, bài viết này sẽ trình bày về nó dưới góc độ sử dụng trong ruby on rails với framework `ActiveRecord`
 
-## Luận bàn
+# Luận bàn
 
-### N+1 query
+# N+1 query
 
 Xét một ví dụ: 
 
@@ -43,7 +43,7 @@ SELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? LIMIT ?  [["
 
 Nhìn như vô hại, mà thực ra ở ví dụ này cũng vô hại thật vì chỉ có 5 record user, nên thời gian load cũng không thấm tháp gì, tuy nhiên trong thực tế thì dữ liệu có thể rất lớn, lên đến hàng triệu record và nếu load dữ liệu như này thì đây là một vấn đề lớn cho hiệu năng của trang web. Hãy đọc tiếp mục 2 để tìm về giải pháp cho tình huống này.
 
-### 2. Giải pháp
+# 2. Giải pháp
 
 Vấn đề đã có, giờ chúng ta cần tìm một giải pháp làm sao để kết quả trả về không đổi, nhưng lượng truy vấn sql trong csdl phải nhỏ hơn.
 
@@ -83,7 +83,7 @@ Vậy từ N+1 query ban đầu, đã trở thành một query duy nhất.
 
 Đến lúc này đã có thể kết luận là joins tốt hơn select in() được chưa? Chưa, câu trả lời sẽ là như vậy. Sang mục 3 chúng ta sẽ tìm hiểu về cách xử lý N+1 thông qua ActiveRecord
 
-### 3. Xử lý N+1 query trong ActiveRecord
+# 3. Xử lý N+1 query trong ActiveRecord
 
 Trong ActiveRecord cung cấp 3 phương thức để loại bỏ N+1,
 
@@ -137,7 +137,7 @@ WHERE "users"."id" IN (?, ?, ?)  [["id", 1], ["id", 2], ["id", 3]]
 ```
 Vậy mặc định thì `includes` sử dụng select in(), nhưng cũng có thể chuyển qua sử dụng joins nếu thêm method references phía sau.
 
-## Kết luận
+# Kết luận
 
 Qua ví dụ trên, ta đã tìm hiểu được một số cách cơ bản để loại bỏ N+1, với việc sử dụng joins sẽ ít query phải thực thi nhất, nhưng điều này không đảm bảo rằng sử dụng joins là tối ưu, vì với mỗi query sql, thời gian và công sức máy tính phải dùng là khác nhau, không phải câu sql nào cũng có thời gian thực hiện ngang nhau.   
 

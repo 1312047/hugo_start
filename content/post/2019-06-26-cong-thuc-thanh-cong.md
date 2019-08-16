@@ -7,7 +7,7 @@ categories: ["random"]
 mytag: "Random"
 ---
 
-### 1. Định nghĩa
+# 1. Định nghĩa
 
 Bạn có mong muốn đạt được thành công trong cuộc sống hay không?  
 
@@ -33,7 +33,7 @@ Ví dụ:
 
 ![hoa](/images/sexymeo.jpg)    
 
-### 2. Công thức
+# 2. Công thức
 
 Rồi bây giờ chúng ta sẽ nói về chủ đề chính, công thức của thành công chính là..... À mà nói chung, tôi cũng không biết, tôi có thành công đâu, nên làm sao mà biết được công thức :sweat:  
 
@@ -53,7 +53,7 @@ Bạn thấy đó? kinh nghiệm từ rất nhiều người đã đúc kết ra
 
 Về mặt cá nhân, tôi rất buồn vì không biết đến những bí quyết này sớm hơn, vì tôi đã không còn kịp học dốt nữa rồi, tôi học khá suốt 16 năm :neutral_face: . Còn về No.2 thì lại càng không có cơ hội, theo tướng số học thì để có cái hình thể con trời, con đất, bạn sẽ phải có cái ngoại hình mà coi chừng, theo như miêu tả sẽ xấu vcl (vô cùng luôn). Tôi thì tuy không được đẹp, cơ mà lại không thể xấu đến mức nhân tướng học như vậy được :confounded:  
 
-### 3. Góc nhìn
+# 3. Góc nhìn
 
 Có lẽ bạn cũng nhận ra, mục số 2 chỉ là châm biếm. Trong hôm nay, tôi có nhận được một câu hỏi từ 1 đứa cháu học cấp 2, nó hỏi tôi làm sao để thành công.  
 

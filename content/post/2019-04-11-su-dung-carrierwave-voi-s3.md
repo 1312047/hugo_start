@@ -1,5 +1,5 @@
 ---
-title: "Sử dụng carrierwave với S3"
+title: "Sử Dụng Carrierwave Với S3"
 date: 2019-04-11
 draft: false
 tags: ["rails", "aws", "carrierwave", "til"]
@@ -7,19 +7,19 @@ categories: ["rails notes"]
 mytag: "TIL"
 ---
 
-### Gemfile
+# Gemfile
 
 ```ruby
 gem 'fog', require: 'fog/aws'
 gem 'carrierwave'
 ```
-### Class Uploader
+# Class Uploader
 
 ```ruby
 storage :fog
 ```
 
-### File cấu hình config/initializers/carrierwave.rb
+# File cấu hình config/initializers/carrierwave.rb
 
 ```ruby
 require 'carrierwave/storage/fog'
@@ -42,10 +42,10 @@ CarrierWave.configure do |config|
 end
 ```
 
-### Acess File uploaded
+# Acess File uploaded
 
 `Instance.field_name_image.url` (get link s3)
 
-### Source demo
+# Source demo
 
 [Tại đây](https://github.com/hdchinh/s3_carrierwave)

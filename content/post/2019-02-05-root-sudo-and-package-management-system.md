@@ -1,5 +1,5 @@
 ---
-title: "Root, sudo và package management"
+title: "Root, Sudo Và Package Management"
 date: 2019-02-05
 draft: false
 tags: ["unix"]
@@ -8,13 +8,13 @@ mytag: "OS"
 mytrend: "COOL"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 Trong một bài viết gần đây về chủ đề file permission trên Unix/Linux, tôi có đề cập đến một người dùng quyền lực trên các hệ thống kể trên có tên gọi là `root`. Bài viết này sẽ khái quát về người dùng này kèm theo hai khái niệm có liên quan là `sudo` và `Package Management System`.
 
-## Luận bàn
+# Luận bàn
 
-### 1.Root
+# 1.Root
 
 Xin được nhắc lại một câu chuyện cũ tôi đã kể trong bài viết trước với ví dụ về mảnh đất nhà bạn, bạn sở hữu mảnh đất đó, vợ bạn sở hữu mảnh đất đó chung với bạn. Nhưng vợ chồng bạn không phải là những người sở hữu tối thượng của mảnh đất kể trên, mà quyền lực to lớn này thuộc về nhà nước, “người” thực ra là đang cho bạn thuê đất có thời hạn. Tương tự trọng Unix/Linux, sẽ có những user (như tài khoản bạn sử dụng để đăng nhập, hoặc tài khoản khách…). 
 
@@ -29,7 +29,7 @@ Một vấn đề phát sinh nếu việc sử dụng Root mang tính rủi ro q
 
 Note: Trên macOS và Ubuntu, `root` mặc định sẽ được disable, chúng có thể sẽ được enable trở lại và re-disable. Cách thực hiện thì có lẽ bạn nên tìm kiếm hướng dẫn từ trang chủ của những hệ điều hành này để câu lệnh của bạn đảm bảo chính xác và không bị lỗi thời.
 
-### 2.Sudo
+# 2.Sudo
 
 Như vấn đề tôi đã nêu ở cuối mục 1, bây giờ tôi muốn cài đặt một số phần mềm đòi hỏi quyền của super user, về lý thuyết tôi đứng giữa hai lựa chọn hoặc chuyển sang `root` và cài đặt phần mềm bình thường (rất rủi ro), phương án 2 là tôi vẫn sử dụng user thường và nói lời tạm biệt với những phần mềm kể trên. 
 
@@ -57,7 +57,7 @@ root ALL=(ALL:ALL) ALL
 Note: Kể từ khi bạn nhập mật khẩu sau khi gõ lệnh `sudo` lần đầu, thời gian có hiệu lực của mật khẩu này sẽ là 15 phút. Trong khoảng thời gian đó bạn có thể chạy các lệnh `sudo` khác mà hệ điều hành không yêu cầu bạn nhập lại mật khẩu.
 
 
-### 3.Package management system
+# 3.Package management system
 
 Khi sử dụng macOS, để cài đặt thêm các phần mềm phục vụ công việc (mà chúng không được support trên appstore), tôi sử dụng `homebrew`, một phần mềm giúp quản lý các phần mềm khác rất hiệu quả.
 
@@ -81,6 +81,6 @@ Còn với `APT`, nó sẽ tự hiểu được package đó cần thêm những
 
 Note: Các `remote repositories` để phần mềm package management của bạn tìm kiếm sẽ được lưu trữ trong file `/etc/apt/sources.list` (đa số là như vậy).
 
-## Kết luận
+# Kết luận
 
 Còn rất nhiều điều cần nói và bàn luận thêm trong các bài viết tiếp theo.

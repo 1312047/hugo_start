@@ -1,5 +1,5 @@
 ---
-title: "Cơ chế Autoloading và Reloading"
+title: "Cơ Chế Autoloading Và Reloading"
 date: 2019-04-17
 draft: false
 tags: ["rails"]
@@ -7,7 +7,7 @@ categories: ["rails notes"]
 mytag: "Rails"
 ---
 
-## Đặt vấn đề
+# Đặt vấn đề
 
 ```ruby
 class CatsController < ApplicationController
@@ -17,7 +17,7 @@ end
 
 Đoạn mã trên là một đoạn mã rất quen thuộc khi sử dụng rails framework, một câu hỏi đó là tại sao trong class CatsController không require file chưa class ApplicationController nhưng ta vẫn có thể sử dụng. Câu trả lời nằm ở việc rails có cơ chế autoloading một số folder nhất định để support cho việc coding và vận hành, bài viết này sẽ nêu một cách khái quát về giải pháp này trong rails.
 
-## Luận bàn
+# Luận bàn
 
 Như bài viết trước đã đề cập về cách mà phương thức require hoạt động:  
 
@@ -53,7 +53,7 @@ Việc thiết lập này phụ thuộc vào cấu hình của bạn trong thư 
 
 - config.eager_load
 
-## Kết luận
+# Kết luận
 
 Tham khảo: 
 
