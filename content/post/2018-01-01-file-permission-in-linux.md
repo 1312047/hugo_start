@@ -4,7 +4,7 @@ date: 2018-01-01
 draft: false
 tags: ["unix"]
 categories: ["hệ điều hành"]
-mytag: "OS/Permission"
+mytag: "OS"
 ---
 
 # Đặt vấn đề

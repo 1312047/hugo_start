@@ -4,7 +4,7 @@ date: 2019-06-26
 draft: false
 tags: ["orm", "ruby"]
 categories: ["rails notes"]
-mytag: "Ruby/ORM"
+mytag: "Ruby"
 mytrend: "COOL"
 # mytop: "TOP VIEWS"
 ---

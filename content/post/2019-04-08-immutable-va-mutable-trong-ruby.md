@@ -4,7 +4,7 @@ date: 2019-04-08
 draft: false
 tags: ["ruby", "programming"]
 categories: ["ruby notes", "programming"]
-mytag: "Ruby/Programming"
+mytag: "Ruby"
 mytrend: "COOL"
 ---
 

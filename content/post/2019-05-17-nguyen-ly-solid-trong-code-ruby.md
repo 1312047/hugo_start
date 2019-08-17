@@ -4,7 +4,7 @@ date: 2019-05-17
 draft: false
 tags: ["solid", "ruby"]
 categories: ["ruby notes", "programming"]
-mytag: "Ruby/SOLID"
+mytag: "Ruby"
 mytrend: "COOL"
 # mytop: "TOP VIEWS"
 ---

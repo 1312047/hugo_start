@@ -4,7 +4,7 @@ date: 2019-05-04
 draft: false
 tags: ["https", "secure"]
 categories: ["rails notes"]
-mytag: "Secure/HTTPS"
+mytag: "Secure"
 ---
 
 # Đặt vấn đề
