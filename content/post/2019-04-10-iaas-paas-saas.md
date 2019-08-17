@@ -4,7 +4,7 @@ date: 2019-04-10
 draft: false
 tags: ["til"]
 categories: ["rails notes"]
-mytag: "TIL"
+mytag: "#TIL"
 ---
 
 **SaaS:  Software as a Service**  

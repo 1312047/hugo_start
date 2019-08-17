@@ -4,7 +4,7 @@ date: 2019-08-05
 draft: false
 tags: ["TIl"]
 categories: ["til"]
-mytag: "TIL"
+mytag: "#TIL"
 ---
 
 # 1. Config to show branch in Terminal

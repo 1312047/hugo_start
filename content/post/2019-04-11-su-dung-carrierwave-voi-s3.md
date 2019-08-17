@@ -4,7 +4,7 @@ date: 2019-04-11
 draft: false
 tags: ["rails", "aws", "carrierwave", "til"]
 categories: ["rails notes"]
-mytag: "TIL"
+mytag: "#TIL"
 ---
 
 # Gemfile

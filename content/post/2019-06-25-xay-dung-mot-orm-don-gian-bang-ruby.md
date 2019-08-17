@@ -6,7 +6,7 @@ tags: ["orm", "ruby"]
 categories: ["rails notes"]
 mytag: "Ruby/ORM"
 mytrend: "COOL"
-mytop: "TOP VIEWS"
+# mytop: "TOP VIEWS"
 ---
 
 # 1. Đặt vấn đề

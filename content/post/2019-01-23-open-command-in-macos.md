@@ -1,5 +1,5 @@
 ---
-title: "Lệnh Open Trên Unix, Hữu Dụng Hơn Bạn Nghĩ"
+title: "Lệnh Open Trên Unix?"
 date: 2018-01-23
 draft: false
 tags: ["unix"]
