@@ -84,3 +84,5 @@ vào phía trước. Trong các bài tiếp theo sẽ giải thích về ý ngh�
 # Kết luận
 
 Trên là 1 cái nhìn tổng quan về phân quyền trên linux. Thế giới unix còn rất nhiều điều thú vị, hi vọng trong thời gian tôi có thể có thời gian để tìm hiểu sâu sắc hơn về nền tảng này.
+
+![File Permission](/images/file_permission.gif)

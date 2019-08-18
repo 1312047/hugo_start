@@ -1,5 +1,5 @@
 ---
-title: "Tấn Công SQL Jnjection"
+title: "Tấn Công SQL Injection"
 date: 2019-06-08
 draft: false
 tags: ["secure", "rails"]
