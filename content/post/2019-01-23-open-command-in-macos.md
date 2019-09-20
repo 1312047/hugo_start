@@ -5,11 +5,13 @@ draft: false
 tags: ["unix"]
 categories: ["hệ điều hành"]
 mytag: "OS"
+mytrend: "COOL"
+
 ---
 
 # Đặt vấn đề
 
-Chắc hẳn không chỉ tôi mà nhiều người dùng MacOS khác đã quen thuộc với câu lệnh `open` trên terminal. 
+Chắc hẳn không chỉ tôi mà nhiều người dùng MacOS khác đã quen thuộc với câu lệnh `open` trên terminal.
 Hiểu một cách cơ bản nhất câu lệnh này giúp chúng ta mở thư mục hiện tại trong cửa sổ Finder. Tuy nhiên, câu lệnh này còn có thể làm được nhiều điều hơn chúng ta tưởng.
 
 # Luận bàn
@@ -51,6 +53,6 @@ Với câu lệnh này thì đường dẫn bạn cung cấp sẽ được mở 
 
 # Kết luận
 
-Bài viết này có giá trị nào không? 
+Bài viết này có giá trị nào không?
 
 Câu trả lời là có, biết thêm về các lệnh Termial sẽ khiến cuộc đời developer của bạn bớt khổ.

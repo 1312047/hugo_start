@@ -4,18 +4,18 @@ date: 2019-02-20
 draft: false
 tags: ["ruby"]
 categories: ["ruby notes"]
-mytag: "Ruby"
+mytag: "#TIL"
 ---
 
 # Đặt vấn đề
 
-Đây lại là một bài viết về chủ đề `core`, phức tạp hoá những thứ mà bình thường đi làm coder ta đa phần là không cần dùng đến. Hôm nay sẽ là các trình thông dịch trong ruby. 
+Đây lại là một bài viết về chủ đề `core`, phức tạp hoá những thứ mà bình thường đi làm coder ta đa phần là không cần dùng đến. Hôm nay sẽ là các trình thông dịch trong ruby.
 
 # Luận bàn
 
 # 1. Ruby chạy code của bạn như nào?
 
-Trước khi nói về các trình thông dịch, tôi xin nêu khái quát về quá trình ruby thực thi mã code của bạn. 
+Trước khi nói về các trình thông dịch, tôi xin nêu khái quát về quá trình ruby thực thi mã code của bạn.
 Với bất cứ đoạn mã ruby nào, mã nguồn bạn viết sẽ trải qua các bước sau để có thể tới được trình thông dịch (chủ đề mà ta đang tìm hiểu).
 
 `Token`: Chuyển đổi mã nguồn ruby thành một dạng keyword. Hiểu đơn giản, ruby sẽ quét qua mã nguồn bạn viết và so sánh với một symbol table nào đó (giả dụ như vậy), để xác định xem trong mã nguồn bạn viết gồm những thành phần nào (để xác định đâu là biến, đâu là keyword, đâu là từ khoá). Ví dụ việc từ `do` xuất hiện trong mã nguồn, có thể nó là một biến local, hoặc nó là một keyword trong một `block`, `Token` sẽ quét mã nguồn và đảm bảo xác định đúng `type` của từng thành phần trong code của bạn, chú ý là `type` nhé, ở bước này ruby chỉ quan tâm đến xác định `type`.
@@ -36,20 +36,20 @@ RbConfig::CONFIG["RUBY_INSTALL_NAME"]
 
 ```
 Matz's Ruby Interpreter or Ruby MRI (also called CRuby)
-was the reference implementation of the Ruby programming language 
+was the reference implementation of the Ruby programming language
 named after Ruby creator Yukihiro Matsumoto ("Matz")
 ```
 
 ```
-YARV (Yet another Ruby VM) is a bytecode interpreter that 
+YARV (Yet another Ruby VM) is a bytecode interpreter that
 was developed for the Ruby programming language by Koichi Sasada.
 The goal of the project was to greatly reduce the execution time of Ruby programs.
 ```
 
 ```
-Since YARV has become the official Ruby interpreter for Ruby 1.9, 
-it is also named KRI (Koichi's Ruby Interpreter), 
-in the same vein as the original Ruby MRI, 
+Since YARV has become the official Ruby interpreter for Ruby 1.9,
+it is also named KRI (Koichi's Ruby Interpreter),
+in the same vein as the original Ruby MRI,
 named for Ruby's creator Yukihiro Matsumoto.
 ```
 
@@ -62,11 +62,11 @@ Qua vài trích dẫn kể trên, bạn có thể thấy đơn giản những kh
 
 # 3. JRuby
 
-Còn một vài trình thông dịch khác mà tôi đã đọc được, nhưng `JRuby` là phần cuối mà chúng ta sẽ tìm hiểu, vì những những trình thông dịch còn lại không được phổ biến cho lắm. 
+Còn một vài trình thông dịch khác mà tôi đã đọc được, nhưng `JRuby` là phần cuối mà chúng ta sẽ tìm hiểu, vì những những trình thông dịch còn lại không được phổ biến cho lắm.
 
 `JRuby` = `Java` + `Ruby`
 
-Tức là dùng phần java làm core để chạy máy ảo xử lý code ruby. Sự khác biệt với mục 2,chính là ở mục 2, dù dưới tên gọi hay phiên bản nào, thì những trình thông dịch đó đều sử dụng `C` làm ngôn ngữ xây dựng. 
+Tức là dùng phần java làm core để chạy máy ảo xử lý code ruby. Sự khác biệt với mục 2,chính là ở mục 2, dù dưới tên gọi hay phiên bản nào, thì những trình thông dịch đó đều sử dụng `C` làm ngôn ngữ xây dựng.
 
 Một số ý kiến xoay quanh `JRuby`
 
@@ -79,4 +79,3 @@ Vậy sẽ là một thảm hoạ nếu sử dụng `JRuby` để làm trình th
 # Kết luận
 
 Trên đây là một số khái quát về lịch sử và hành trình của các trình thông dịch Ruby. Nếu có sai xót, xin hãy để lại bình luận ở dưới bài viết.
-                            

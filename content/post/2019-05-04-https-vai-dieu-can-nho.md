@@ -5,6 +5,8 @@ draft: false
 tags: ["https", "secure"]
 categories: ["rails notes"]
 mytag: "Secure"
+mytrend: "COOL"
+
 ---
 
 # Đặt vấn đề
@@ -65,4 +67,3 @@ Note: Nhờ cơ chế mã hoá RSA (Chỉ có thể mã hoá bằng public key v
 # Kết luận
 
 Không có kết luận :)
-

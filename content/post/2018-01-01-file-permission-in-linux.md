@@ -5,6 +5,8 @@ draft: false
 tags: ["unix"]
 categories: ["hệ điều hành"]
 mytag: "OS"
+mytrend: "COOL"
+
 ---
 
 # Đặt vấn đề
@@ -57,16 +59,16 @@ Giải thích câu lệnh trên:
 -xyz là 3 số nguyên liền nhau( giá trị của ba số này có thể là 0,1,2,3,4,5,6,7).
 Với x ứng với quyền phân cho owner, y ứng với quyền phân cho group và z là cho everyone.
 
-:zero: không có quyền gì cả.  
+:zero: không có quyền gì cả.
 
-:one: quyền thực thi tập tin.  
+:one: quyền thực thi tập tin.
 
-:two: quyền write only.  
+:two: quyền write only.
 
 :four: quyền read only.
 
 Với 4 số trên ta có thể cộng lại và ra 1 số mới với permission được cộng dồn.
-Ví dụ: 7 = 4 + 2 + 1 => tất cả các quyền. Tương tự với cả tổ hợp khác.  
+Ví dụ: 7 = 4 + 2 + 1 => tất cả các quyền. Tương tự với cả tổ hợp khác.
 
 Suy ra với lệnh `chmod 777 file_name` --> Ta đã gán tất cả quyền cho cả 3 loại user(như liệt kê ở mục 3).
 

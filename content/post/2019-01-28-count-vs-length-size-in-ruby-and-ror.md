@@ -5,11 +5,13 @@ draft: false
 tags: ["ruby", "rails"]
 categories: ["ruby notes"]
 mytag: "Ruby"
+mytrend: "COOL"
+
 ---
 
 # Đặt vấn đề
 
-Khoảng 1 năm trước, khi tôi bắt đầu học về Ruby on Rails, giống như nhiều developers khác, tôi chủ yếu tập trung vào cách để có thể xây dựng một ứng dụng ruby on rails chạy được mà không tập trung nhiều vào kiến thức Ruby nền tảng. Có lẽ đấy cũng là lựa chọn duy nhất vào thời điểm đó với một cậu sinh viên mới ra trường như tôi, khi mà có quá nhiều khái niệm, quá nhiều thứ phải học mà sếp của tôi cũng như sếp của bạn sẽ không trả lương cho chúng ta lên công ty để “học”. 
+Khoảng 1 năm trước, khi tôi bắt đầu học về Ruby on Rails, giống như nhiều developers khác, tôi chủ yếu tập trung vào cách để có thể xây dựng một ứng dụng ruby on rails chạy được mà không tập trung nhiều vào kiến thức Ruby nền tảng. Có lẽ đấy cũng là lựa chọn duy nhất vào thời điểm đó với một cậu sinh viên mới ra trường như tôi, khi mà có quá nhiều khái niệm, quá nhiều thứ phải học mà sếp của tôi cũng như sếp của bạn sẽ không trả lương cho chúng ta lên công ty để “học”.
 Thời gian trôi qua, khi đã có nhiều kinh nghiệm hơn, tôi bắt đầu ngày càng hứng thú về những kiến thức nền tảng mà ngày xưa tôi chỉ từng đọc lướt qua. Trong đó có Count, Length và Size, những thứ tưởng như không có gì để nói hay tìm hiểu thêm, nhưng liệu chúng có thực sự đơn giản như vậy?
 
 # Luận bàn
@@ -68,5 +70,5 @@ Khi sử dụng Size, điều đầu tiên của nó là tìm xem kết quả c�
 
 # Kết luận
 
-Theo dữ liệu từ fast-ruby thì method length chạy gần tương đương với size và chạy nhanh hơn hẳn so với count. Điểm lợi của count là nó có thể được gọi từ 1 class Model, giúp cú pháp tường minh hơn, cũng như việc có thể truyền tham số vào hàm.  
+Theo dữ liệu từ fast-ruby thì method length chạy gần tương đương với size và chạy nhanh hơn hẳn so với count. Điểm lợi của count là nó có thể được gọi từ 1 class Model, giúp cú pháp tường minh hơn, cũng như việc có thể truyền tham số vào hàm.
 Ngược lại trong các trường hợp khác, việc sử dụng size là khả dĩ hơn cả, đặc biệt với dữ liệu lớn thì nên tránh sử dụng length, vì đó có thể mang lại 1 thảm hoạ cho chương trình khi quá nhiều dữ liệu bị nạp vào bộ nhớ 1 cách vô ích.

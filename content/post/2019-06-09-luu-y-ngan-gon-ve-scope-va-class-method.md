@@ -5,16 +5,18 @@ draft: false
 tags: ["ruby", "rails"]
 categories: ["rails notes"]
 mytag: "Rails"
+mytrend: "COOL"
+
 ---
 # Đặt vấn đề
 
-Trong một thời gian rất lâu, từ khi mới học đến khi làm những ứng dụng đầu tiên. Tôi luôn cho rằng Scope và và Class Method hoàn toàn giống nhau. Và lý do Scope xuất hiện là để giúp mã nguồn ngắn gọn hơn.  
+Trong một thời gian rất lâu, từ khi mới học đến khi làm những ứng dụng đầu tiên. Tôi luôn cho rằng Scope và và Class Method hoàn toàn giống nhau. Và lý do Scope xuất hiện là để giúp mã nguồn ngắn gọn hơn.
 
-Nhưng rõ ràng đấy là một suy nghĩ chưa đúng, dưới đây là điểm cần chú ý về 2 phương thức này.  
+Nhưng rõ ràng đấy là một suy nghĩ chưa đúng, dưới đây là điểm cần chú ý về 2 phương thức này.
 
 # Luận bàn
 
-Tôi có 1 scope:  
+Tôi có 1 scope:
 
 ```ruby
 class Product < ActiveRecord::Base
@@ -24,7 +26,7 @@ end
 # Lấy các products có thuộc tính is_active là true.
 ```
 
-Tôi có 1 class method: 
+Tôi có 1 class method:
 
 ```ruby
 class Product < ActiveRecord::Base
@@ -34,7 +36,7 @@ class Product < ActiveRecord::Base
 end
 ```
 
-2 method này là hoàn toàn tương đương nhau, kết quả trả về cũng vậy. Bây giờ thử 1 ví dụ khác.  
+2 method này là hoàn toàn tương đương nhau, kết quả trả về cũng vậy. Bây giờ thử 1 ví dụ khác.
 
 ```ruby
 class Product < ActiveRecord::Base
@@ -46,7 +48,7 @@ end
 
 ```
 
-Viết ví dụ trên dưới dạng Class Method:  
+Viết ví dụ trên dưới dạng Class Method:
 
 ```ruby
 class Product < ActiveRecord::Base
@@ -76,11 +78,11 @@ Product.by_type(nil).is_active
 # Trản về một error method is_active không được định nghĩa cho nil.
 ```
 
-Ủa vậy chuyện này là sao? Tại sao Scope vẫn work bình thường trong khi Class Method lại bắn về một exception?  
+Ủa vậy chuyện này là sao? Tại sao Scope vẫn work bình thường trong khi Class Method lại bắn về một exception?
 
-Đây chính là điểm khác biệt quan trọng của Scopy và Class Method.  
+Đây chính là điểm khác biệt quan trọng của Scopy và Class Method.
 
-Scope luôn luôn trả về một `ActiveRecord Relation`. Còn Class Method thì sao? Nếu bạn không cover trường hợp **nil/blank** thì nó sẽ văng về **nil/blank** như vậy không thể chạy Class Method phía sau, vì method đó không thể chạy **với nil/blank**. :smile:  
+Scope luôn luôn trả về một `ActiveRecord Relation`. Còn Class Method thì sao? Nếu bạn không cover trường hợp **nil/blank** thì nó sẽ văng về **nil/blank** như vậy không thể chạy Class Method phía sau, vì method đó không thể chạy **với nil/blank**. :smile:
 
 # Kết luận
 

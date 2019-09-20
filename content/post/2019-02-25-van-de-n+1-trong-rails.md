@@ -5,6 +5,7 @@ draft: false
 tags: ["database", "rails"]
 categories: ["rails notes"]
 mytag: "Rails"
+mytrend: "COOL"
 ---
 
 # Đặt vấn đề
@@ -15,7 +16,7 @@ Có thể bạn đã từng nghe qua về N+1, đây là một chủ để cơ b
 
 # N+1 query
 
-Xét một ví dụ: 
+Xét một ví dụ:
 
 Tôi có một ứng dụng đơn giản, với hai bảng csdl, bảng thứ nhất là bảng users, bảng thứ hai là bảng articles, một user có thể có nhiều articles nhưng một article chỉ thuộc về user. Hãy xem đoạn mã dưới đây:
 
@@ -24,7 +25,7 @@ User.all.each do |user|
   user.articles
 end
 ```
-Đoạn code trên sẽ duyệt qua tất cả user có trong csdl rồi lấy tất cả các articles ứng với từng user. Rất tường minh và dễ hiểu. 
+Đoạn code trên sẽ duyệt qua tất cả user có trong csdl rồi lấy tất cả các articles ứng với từng user. Rất tường minh và dễ hiểu.
 
 Tối có 5 user mẫu trong csdl nên các câu lệnh sql sinh ra sau đoạn code trên như sau:
 
@@ -68,7 +69,7 @@ Với cách thứ 2 là sử dụng `joins`:
 
 joins hiểu đơn giản là ghép hai bảng lại với nhau (lấy một số field cần thiết ở bảng này, gộp với vài field cần thiết ở bảng kia khi mà record ở hai bên thoả mãn một điều kiện nào đó), rồi từ đó thành một bảng tạm dùng trong quá trình bạn sử dụng.
 
-Quay trở về ví dụ ban đầu, câu truy vấn bây giờ sẽ trở thành: 
+Quay trở về ví dụ ban đầu, câu truy vấn bây giờ sẽ trở thành:
 
 ```ruby
 SELECT User.name, Article.title
@@ -79,7 +80,7 @@ SELECT User.name, Article.title
 Lấy vài field cần thiết(name của user và title của Article).
 Bằng cách thoả mãn điều kiện nào đó(id của user bằng với user_id của article).
 
-Vậy từ N+1 query ban đầu, đã trở thành một query duy nhất. 
+Vậy từ N+1 query ban đầu, đã trở thành một query duy nhất.
 
 Đến lúc này đã có thể kết luận là joins tốt hơn select in() được chưa? Chưa, câu trả lời sẽ là như vậy. Sang mục 3 chúng ta sẽ tìm hiểu về cách xử lý N+1 thông qua ActiveRecord
 
@@ -107,7 +108,7 @@ SELECT  DISTINCT "users"."id" FROM "users" LEFT OUTER JOIN "articles" ON "articl
 SELECT "users"."id" AS t0_r0, "users"."name" AS t0_r1, "users"."created_at" AS t0_r2,
 "users"."updated_at" AS t0_r3, "articles"."id" AS t1_r0, "articles"."name" AS t1_r1,
 "articles"."user_id" AS t1_r2, "articles"."created_at" AS t1_r3, "articles"."updated_at" AS t1_r4
-FROM "users" LEFT OUTER JOIN "articles" ON "articles"."user_id" = "users"."id" 
+FROM "users" LEFT OUTER JOIN "articles" ON "articles"."user_id" = "users"."id"
 WHERE "users"."id" IN (?, ?, ?)  [["id", 1], ["id", 2], ["id", 3]]
 ```
 
@@ -126,12 +127,12 @@ SELECT "articles".* FROM "articles" WHERE "articles"."user_id" IN (?, ?, ?)  [["
 # cách 2
 User.includes(:articles).references(:articles)
 # sql sinh ra
-SELECT  DISTINCT "users"."id" FROM "users" LEFT OUTER JOIN "articles" 
+SELECT  DISTINCT "users"."id" FROM "users" LEFT OUTER JOIN "articles"
 ON "articles"."user_id" = "users"."id" LIMIT ?  [["LIMIT", 11]]
 SELECT "users"."id" AS t0_r0, "users"."name" AS t0_r1, "users"."created_at" AS t0_r2,
 "users"."updated_at" AS t0_r3, "articles"."id" AS t1_r0, "articles"."name" AS t1_r1,
 "articles"."user_id" AS t1_r2, "articles"."created_at" AS t1_r3, "articles"."updated_at" AS t1_r4
-FROM "users" LEFT OUTER JOIN "articles" ON "articles"."user_id" = "users"."id" 
+FROM "users" LEFT OUTER JOIN "articles" ON "articles"."user_id" = "users"."id"
 WHERE "users"."id" IN (?, ?, ?)  [["id", 1], ["id", 2], ["id", 3]]
 #=> giống eager_load
 ```
@@ -139,8 +140,8 @@ Vậy mặc định thì `includes` sử dụng select in(), nhưng cũng có th
 
 # Kết luận
 
-Qua ví dụ trên, ta đã tìm hiểu được một số cách cơ bản để loại bỏ N+1, với việc sử dụng joins sẽ ít query phải thực thi nhất, nhưng điều này không đảm bảo rằng sử dụng joins là tối ưu, vì với mỗi query sql, thời gian và công sức máy tính phải dùng là khác nhau, không phải câu sql nào cũng có thời gian thực hiện ngang nhau.   
+Qua ví dụ trên, ta đã tìm hiểu được một số cách cơ bản để loại bỏ N+1, với việc sử dụng joins sẽ ít query phải thực thi nhất, nhưng điều này không đảm bảo rằng sử dụng joins là tối ưu, vì với mỗi query sql, thời gian và công sức máy tính phải dùng là khác nhau, không phải câu sql nào cũng có thời gian thực hiện ngang nhau.
 
-Sử dụng joins trong nhiều trường hợp csdl quá lớn cũng không phải là một ý hay, khi bản chất của joins là duyệt tuần tự qua hai (nhiều) bảng cần joins, để tìm những phần tử phù hợp rồi cho vào một bảng tạm. Hai vấn đề thấy ngay là việc phải duyệt tuần tự hai hay nhiều bảng là một truy vấn tốn tài nguyên, thứ hai dữ liệu được bỏ vào mảng tạm hiển nhiên ta cần một vùng nhớ để lưu cái bảng tạm này.  
+Sử dụng joins trong nhiều trường hợp csdl quá lớn cũng không phải là một ý hay, khi bản chất của joins là duyệt tuần tự qua hai (nhiều) bảng cần joins, để tìm những phần tử phù hợp rồi cho vào một bảng tạm. Hai vấn đề thấy ngay là việc phải duyệt tuần tự hai hay nhiều bảng là một truy vấn tốn tài nguyên, thứ hai dữ liệu được bỏ vào mảng tạm hiển nhiên ta cần một vùng nhớ để lưu cái bảng tạm này.
 
 Để đi sâu hơn về vấn đề hiệu năng, các bài tiếp sau chúng ta sẽ thảo luận về nó.

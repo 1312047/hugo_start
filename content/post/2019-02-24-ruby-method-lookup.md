@@ -4,8 +4,7 @@ date: 2019-02-24
 draft: false
 tags: ["ruby"]
 categories: ["ruby notes"]
-mytag: "Ruby"
-mytrend: "COOL"
+mytag: "#TIL"
 ---
 
 # Đặt vấn đề
@@ -19,7 +18,7 @@ Cũng như nhiều ngôn ngữ khác, trong ruby, khi làm việc với một đ
 Đã khi nào bạn tự hỏi, giả sử nếu bạn có một class A, và class này include thêm hai module vào nữa, nếu trong hai module đó cùng định nghĩa một phương thức, vậy khi instance của A gọi đến phương thức đó, điều gì sẽ xảy ra? Phương thức trong module nào được chạy?
 
 
-Câu trả lời là thứ tự các phương thức được ruby tìm kiếm như sau: 
+Câu trả lời là thứ tự các phương thức được ruby tìm kiếm như sau:
 
 1. Phương thức được định nghĩa trong `object's singleton class`.
 
@@ -29,14 +28,14 @@ Câu trả lời là thứ tự các phương thức được ruby tìm kiếm n
 
 4. Phương thức trong các `module` được `include` vào class ta đang xét (Cũng theo tứ tự đảo ngược).
 
-5. Phương thức trong `Super class` của class ta đang xét. 
+5. Phương thức trong `Super class` của class ta đang xét.
 
 Để làm rõ điều đã nói hãy xét ví dụ dưới đây:
 
 ```ruby
 module One
   def hello
-    "I'm one (include in class Test)" 
+    "I'm one (include in class Test)"
   end
 end
 
@@ -60,7 +59,7 @@ end
 
 class FatherOfTest
   def hello
-   "I'm father of test class" 
+   "I'm father of test class"
   end
 end
 
@@ -85,7 +84,7 @@ m.extend(Four)
 m.hello
 ```
 
-Tất nhiên đoạn mã trên sẽ có output là: 
+Tất nhiên đoạn mã trên sẽ có output là:
 
 `"I'm object m"`
 
@@ -99,7 +98,7 @@ def m.hello
 end
 ```
 
-Chạy lại ta nhận được kết quả: 
+Chạy lại ta nhận được kết quả:
 
 `"I'm four (extend)"`
 
@@ -115,9 +114,9 @@ Làm tương tự rồi ta sẽ tìm ra thứ tự ưu tiên kết quả như sa
 "It's my hello - Test class"
 # phương thức trong module được include vào Class Test
 "I'm two (include in class Test)"
-"I'm one (include in class Test)" 
+"I'm one (include in class Test)"
 # phương thức trong lớp cha của Class Test
-"I'm father of test class" 
+"I'm father of test class"
 ```
 
 Nếu bạn đang còn một chút bối rối vì những từ khoá và cách sử dụng `extend` và `include` hãy đọc tiếp mục dưới.
